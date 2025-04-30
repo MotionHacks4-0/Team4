@@ -30,6 +30,19 @@ class LoginController extends GetxController {
     }
   }
 
+  Future<void> loginWithGoogle() async {
+    try {
+      final user = await _authService.loginWithGoogle();
+      if (user != null) {
+        Get.offNamed(Routes.PROFILE);
+      } else {
+        Get.snackbar('Login Canceled', 'User canceled the Google sign-in.');
+      }
+    } catch (e) {
+      Get.snackbar('Login Failed', e.toString());
+    }
+  }
+
   void goToForgotPassword() {
     // Add your navigation logic here
     Get.toNamed('/forgot-password');
