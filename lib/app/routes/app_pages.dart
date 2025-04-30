@@ -1,7 +1,17 @@
 import 'package:get/get.dart';
 
+import '../modules/bottomnavigation/bindings/bottomnavigation_binding.dart';
+import '../modules/bottomnavigation/views/bottomnavigation_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
+
+import '../modules/inputgram/bindings/inputgram_binding.dart';
+import '../modules/inputgram/views/inputgram_view.dart';
+
+
+import '../modules/volunteer/bindings/volunteer_binding.dart';
+import '../modules/volunteer/views/volunteer_view.dart';
+
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
@@ -10,6 +20,7 @@ import '../modules/profile/bindings/profile_binding.dart';
 import '../modules/profile/views/profile_view.dart';
 import '../modules/register/bindings/register_binding.dart';
 import '../modules/register/views/register_view.dart';
+
 import '../widgets/splash.dart';
 
 part 'app_routes.dart';
@@ -33,6 +44,21 @@ class AppPages {
       name: _Paths.ONBOARDING,
       page: () => const OnboardingView(),
       binding: OnboardingBinding(),
+    ),
+    GetPage(
+      name: _Paths.BOTTOMNAVIGATION,
+      page: () => const BottomnavigationView(),
+      binding: BottomnavigationBinding(),
+    ),
+    GetPage(
+      name: _Paths.INPUTGRAM,
+      page: () => const InputgramView(),
+      binding: InputgramBinding(),
+    ),
+    GetPage(
+      name: _Paths.VOLUNTEER,
+      page: () => const VolunteerView(),
+      binding: VolunteerBinding(),
     ),
     GetPage(
       name: _Paths.LOGIN,
