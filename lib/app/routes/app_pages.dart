@@ -57,6 +57,7 @@ class AppPages {
       name: _Paths.VOLUNTEER,
       page: () => const VolunteerView(),
       binding: VolunteerBinding(),
+    ),
     GetPage(
       name: _Paths.LOGIN,
       page: () => const LoginView(),
