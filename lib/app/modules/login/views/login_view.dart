@@ -1,6 +1,7 @@
 import 'package:eco_trip/app/routes/app_pages.dart';
 import 'package:eco_trip/app/utils/app_style.dart';
 import 'package:eco_trip/app/widgets/custom_button.dart';
+import 'package:eco_trip/app/widgets/custom_textform.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -26,9 +27,49 @@ class LoginView extends GetView<LoginController> {
               ),
             ),
             SizedBox(height: 28),
+            CustomTextform(
+              title: "Email",
+              textHint: "Your Email",
+              onChanged: (val) => controller.email.value = val,
+            ),
+            SizedBox(height: 22),
+            Obx(
+              () => CustomTextform(
+                title: "kata Sandi",
+                textHint: "Password",
+                obscureText: controller.isPasswordHidden.value,
+                onChanged: (val) => controller.password.value = val,
+                icon: "eye.png",
+                onIconTap: controller.togglePasswordVisibility,
+              ),
+            ),
+            SizedBox(height: 10),
+            Row(
+              children: [
+                Padding(
+                  padding: EdgeInsets.only(left: 18),
+                  child: Obx(() => Checkbox(
+                        value: controller.rememberMe.value,
+                        onChanged: controller.toggleRememberMe,
+                      )),
+                ),
+                Text(
+                  "Ingat saya",
+                  style: Style.headLineStyle5,
+                ),
+                SizedBox(width: 110),
+                GestureDetector(
+                  onTap: () {},
+                  child: Text("Lupa kata sandi?", style: Style.headLineStyle5),
+                ),
+              ],
+            ),
+            SizedBox(height: 30),
             CustomButton(
               text: "Masuk",
-              onPress: () {},
+              onPress: () {
+                controller.login();
+              },
               textStyle: Style.headLineStyle6,
               col: Style.primaryColor,
               borderColor: Style.primaryColor,
@@ -41,7 +82,9 @@ class LoginView extends GetView<LoginController> {
             SizedBox(height: 16),
             CustomButton(
               text: "Masuk dengan Google",
-              onPress: () {},
+              onPress: () {
+                controller.loginWithGoogle();
+              },
               icon: "google.png",
               col: Style.whiteColor,
               borderColor: Style.greyColor1,
@@ -57,7 +100,7 @@ class LoginView extends GetView<LoginController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.toNamed(Routes.REGISTER);
+                    Get.offNamed(Routes.REGISTER);
                   },
                   child: Text(
                     "Daftar",

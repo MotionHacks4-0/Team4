@@ -10,12 +10,17 @@ class Style {
   static Color whiteColor = const Color(0xFFFFFFFF);
   static Color greyColor1 = const Color(0xFFEFEFEF);
   static Color greyColor2 = const Color(0xFF656565);
-
+  static Color redColor = const Color(0xFFB80A0A);
   static Color blueColor = const Color(0xff4C76A5);
   static TextStyle textStyle = GoogleFonts.poppins(
     fontSize: 16,
     color: textColor,
     fontWeight: FontWeight.w500,
+  );
+  static TextStyle textStyle2 = GoogleFonts.poppins(
+    fontSize: 16,
+    color: Colors.black,
+    fontWeight: FontWeight.bold,
   );
   static TextStyle headLineStyle = GoogleFonts.poppins(
     fontSize: 26,
@@ -53,6 +58,26 @@ class Style {
   static TextStyle headLineStyle8 = GoogleFonts.poppins(
     fontSize: 30,
     color: textColor,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle headLineStyle9 = GoogleFonts.poppins(
+    fontSize: 14,
+    color: Color(0xFF292929),
+  );
+  static TextStyle headLineStyle10 = GoogleFonts.poppins(
+    fontSize: 24,
+    color: textColor,
+    fontWeight: FontWeight.bold,
+  );
+
+  static TextStyle headLineStyle11 = GoogleFonts.poppins(
+    fontSize: 14,
+    color: Color(0xFF589A73),
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle headLineStyle12 = GoogleFonts.poppins(
+    fontSize: 14,
+    color: blueColor,
     fontWeight: FontWeight.bold,
   );
 }
