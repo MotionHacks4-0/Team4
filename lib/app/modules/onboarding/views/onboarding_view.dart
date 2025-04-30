@@ -1,4 +1,5 @@
 import 'package:eco_trip/app/utils/app_style.dart';
+import 'package:eco_trip/app/widgets/onboarding.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -29,9 +30,24 @@ class OnboardingView extends GetView<OnboardingController> {
             },
             children: [
               //start page
-              OnBoardingWidgets(),
-              OnBoardingWidgets(),
-              OnBoardingWidgets(),
+              OnBoardingView(
+                image: 'onboard1.png',
+                title: 'Jelajah Seru, Bumi Lebih Asri',
+                subtitle:
+                    'Liburan tetap seru, tapi punya dampak positif\nbagi lingkungan',
+              ),
+              OnBoardingView(
+                image: 'onboard2.png',
+                title: 'Jelajah Seru, Bumi Lebih Asri',
+                subtitle:
+                    'Liburan tetap seru, tapi punya dampak positif\nbagi lingkungan',
+              ),
+              OnBoardingView(
+                image: 'onboard3.png',
+                title: 'Jelajah Seru, Bumi Lebih Asri',
+                subtitle:
+                    'Liburan tetap seru, tapi punya dampak positif\nbagi lingkungan',
+              ),
             ],
           ),
           Align(
@@ -99,50 +115,6 @@ class OnboardingView extends GetView<OnboardingController> {
           ),
         ],
       ),
-    );
-  }
-}
-
-class OnBoardingWidgets extends StatelessWidget {
-  const OnBoardingWidgets({
-    super.key,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Column(
-      children: [
-        Container(
-          padding: EdgeInsets.only(top: 70),
-          height: Get.height * 0.65,
-          child: Image.asset(
-            'assets/images/onboard1.png',
-            scale: 1.75,
-            fit: BoxFit
-                .contain, // bisa juga coba BoxFit.cover tergantung kebutuhan
-          ),
-        ),
-        Container(
-          height: Get.height * 0.35,
-          width: Get.width,
-          padding: EdgeInsets.only(bottom: 10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: [
-              Text('Jelajah Seru, Bumi Lebih Asri',
-                  style: Style.headLineStyle2),
-              SizedBox(
-                height: 20,
-              ),
-              Text(
-                'Liburan tetap seru, tapi punya dampak positif\nbagi lingkungan',
-                style: Style.headLineStyle5,
-                textAlign: TextAlign.center,
-              )
-            ],
-          ),
-        ),
-      ],
     );
   }
 }
