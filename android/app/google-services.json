@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "654275178642",
+    "project_id": "team4-8e751",
+    "storage_bucket": "team4-8e751.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:654275178642:android:4deb9c94b04af7e935f64b",
+        "android_client_info": {
+          "package_name": "com.EcoTrip.eco_trip"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBv5aMR7Vnc5toNh__L83zRwqJaT1iFriI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

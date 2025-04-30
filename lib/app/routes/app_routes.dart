@@ -9,6 +9,8 @@ abstract class Routes {
   static const BOTTOMNAVIGATION = _Paths.BOTTOMNAVIGATION;
   static const INPUTGRAM = _Paths.INPUTGRAM;
   static const VOLUNTEER = _Paths.VOLUNTEER;
+  static const LOGIN = _Paths.LOGIN;
+  static const REGISTER = _Paths.REGISTER;
 }
 
 abstract class _Paths {
@@ -19,4 +21,6 @@ abstract class _Paths {
   static const BOTTOMNAVIGATION = '/bottomnavigation';
   static const INPUTGRAM = '/inputgram';
   static const VOLUNTEER = '/volunteer';
+  static const LOGIN = '/login';
+  static const REGISTER = '/register';
 }
