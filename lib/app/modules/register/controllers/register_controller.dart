@@ -1,9 +1,30 @@
+import 'package:eco_trip/app/routes/app_pages.dart';
+import 'package:eco_trip/app/services/auth_service.dart';
 import 'package:get/get.dart';
 
 class RegisterController extends GetxController {
-  //TODO: Implement RegisterController
+  final AuthService _authService = AuthService();
 
-  final count = 0.obs;
+  final name = ''.obs;
+  final email = ''.obs;
+  final password = ''.obs;
+  var isPasswordHidden = true.obs;
+
+  Future<void> register() async {
+    try {
+      final user = await _authService.register(email.value, password.value);
+      if (user != null) {
+        Get.offNamed(Routes.LOGIN);
+      }
+    } catch (e) {
+      Get.snackbar('Registration Failed', e.toString());
+    }
+  }
+
+  void togglePasswordVisibility() {
+    isPasswordHidden.value = !isPasswordHidden.value;
+  }
+
   @override
   void onInit() {
     super.onInit();
@@ -18,6 +39,4 @@ class RegisterController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }
