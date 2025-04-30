@@ -3,7 +3,22 @@ import 'package:get/get.dart';
 class LoginController extends GetxController {
   //TODO: Implement LoginController
 
-  final count = 0.obs;
+  var obscurePassword = true.obs;
+  var rememberMe = false.obs;
+
+  void togglePasswordVisibility() {
+    obscurePassword.value = !obscurePassword.value;
+  }
+
+  void toggleRememberMe(bool? value) {
+    rememberMe.value = value ?? false;
+  }
+
+  void goToForgotPassword() {
+    // Add your navigation logic here
+    Get.toNamed('/forgot-password');
+  }
+
   @override
   void onInit() {
     super.onInit();
@@ -18,6 +33,4 @@ class LoginController extends GetxController {
   void onClose() {
     super.onClose();
   }
-
-  void increment() => count.value++;
 }
