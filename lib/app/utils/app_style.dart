@@ -1,18 +1,38 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class Style {
-  static Color primaryColor = const Color(0xff687daf);
+  static Color primaryColor = const Color(0xff589A73);
+  static Color primaryColor30 = const Color(0x4D589A73);
+  static Color primaryColor10 = const Color(0x1A589A73);
   static Color textColor = const Color(0xff3b3b3b);
   static Color bgColor = const Color(0xffeeedf2);
-  static Color orangeColor = const Color(0xfff37b67);
-  static TextStyle textStyle =
-      TextStyle(fontSize: 16, color: textColor, fontWeight: FontWeight.w500);
-  static TextStyle headLineStyle =
-      TextStyle(fontSize: 26, color: textColor, fontWeight: FontWeight.bold);
-  static TextStyle headLineStyle2 =
-      TextStyle(fontSize: 21, color: textColor, fontWeight: FontWeight.bold);
-  static TextStyle headLineStyle3 = TextStyle(
+  static Color blueColor = const Color(0xff4C76A5);
+  static TextStyle textStyle = GoogleFonts.poppins(
+    fontSize: 16,
+    color: textColor,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle headLineStyle = GoogleFonts.poppins(
+    fontSize: 26,
+    color: textColor,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle headLineStyle2 = GoogleFonts.poppins(
+    fontSize: 21,
+    color: textColor,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle headLineStyle3 = GoogleFonts.poppins(
       fontSize: 17, color: Colors.grey.shade500, fontWeight: FontWeight.w500);
-  static TextStyle headLineStyle4 = TextStyle(
-      fontSize: 14, color: Colors.grey.shade500, fontWeight: FontWeight.w500);
+  static TextStyle headLineStyle4 = GoogleFonts.poppins(
+    fontSize: 14,
+    color: Colors.grey.shade500,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle headLineStyle5 = GoogleFonts.poppins(
+    fontSize: 14,
+    color: Colors.black,
+    fontWeight: FontWeight.w500,
+  );
 }
