@@ -24,7 +24,7 @@ class OnboardingView extends GetView<OnboardingController> {
 
               if (controller.page.value == 2) {
                 Future.delayed(const Duration(seconds: 2), () {
-                  Get.offAllNamed(Routes.HOME);
+                  Get.offAllNamed(Routes.BOTTOMNAVIGATION);
                 });
               }
             },
