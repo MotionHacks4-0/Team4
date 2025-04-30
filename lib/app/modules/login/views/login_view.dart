@@ -82,7 +82,9 @@ class LoginView extends GetView<LoginController> {
             SizedBox(height: 16),
             CustomButton(
               text: "Masuk dengan Google",
-              onPress: () {},
+              onPress: () {
+                controller.loginWithGoogle();
+              },
               icon: "google.png",
               col: Style.whiteColor,
               borderColor: Style.greyColor1,

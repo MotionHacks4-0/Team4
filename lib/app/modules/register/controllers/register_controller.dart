@@ -8,6 +8,7 @@ class RegisterController extends GetxController {
   final name = ''.obs;
   final email = ''.obs;
   final password = ''.obs;
+  var isPasswordHidden = true.obs;
 
   Future<void> register() async {
     try {
@@ -18,6 +19,10 @@ class RegisterController extends GetxController {
     } catch (e) {
       Get.snackbar('Registration Failed', e.toString());
     }
+  }
+
+  void togglePasswordVisibility() {
+    isPasswordHidden.value = !isPasswordHidden.value;
   }
 
   @override

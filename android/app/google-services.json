@@ -12,7 +12,20 @@
           "package_name": "com.EcoTrip.eco_trip"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "654275178642-ksicqrdbh3f7lrv324q7qfhodks6sr36.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.EcoTrip.eco_trip",
+            "certificate_hash": "d540e615234975f2acc66afb8b9bf7fe97a005cd"
+          }
+        },
+        {
+          "client_id": "654275178642-3akfjgc2jebn6vc1nb118aap9e9iejch.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyBv5aMR7Vnc5toNh__L83zRwqJaT1iFriI"
@@ -20,7 +33,19 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "654275178642-3akfjgc2jebn6vc1nb118aap9e9iejch.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "654275178642-lpc9upkct4nki7ael64knneqi9gvlfq4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.EcoTrip.ecoTrip"
+              }
+            }
+          ]
         }
       }
     }

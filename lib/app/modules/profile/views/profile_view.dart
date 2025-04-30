@@ -61,12 +61,12 @@ class ProfileView extends StatelessWidget {
             ),
             ProfileInfoTile(
               label: 'Nama',
-              value: 'Veiron Vaya Yarief',
+              value: controller.displayName.value,
               editable: true,
             ),
             ProfileInfoTile(
               label: 'Nama Pengguna',
-              value: 'Veiron123',
+              value: 'Masukkan nama pengguna',
               editable: true,
             ),
             ProfileInfoTile(
@@ -77,28 +77,28 @@ class ProfileView extends StatelessWidget {
             Divider(height: 30),
             ProfileInfoTile(
               label: 'ID Pengguna',
-              value: '12345678',
+              value: controller.uid.value,
               copyable: true,
             ),
             ProfileInfoTile(
               label: 'Telepon',
-              value: '+62819372921',
+              value: controller.phoneNumber.value,
               editable: true,
             ),
             ProfileInfoTile(
               label: 'Tanggal Lahir',
-              value: '1 January 2000',
+              value: 'Masukkan tanggal lahir',
               editable: true,
             ),
             ProfileInfoTile(
               label: 'Kelamin',
-              value: 'Perempuan',
+              value: 'Masukkan jenis kelamin',
               editable: true,
             ),
             SizedBox(height: 10),
             ProfileInfoTile(
               label: 'E-mail',
-              value: 'karinas@gmail.com',
+              value: controller.email.value,
             ),
             SizedBox(height: 40),
             CustomButton(

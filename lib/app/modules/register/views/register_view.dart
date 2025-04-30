@@ -45,11 +45,15 @@ class RegisterView extends GetView<RegisterController> {
               onChanged: (value) => controller.email.value = value,
             ),
             SizedBox(height: 22),
-            CustomTextform(
-              title: "Kata Sandi",
-              textHint: "Buat kata sandi",
-              icon: "eye.png",
-              onChanged: (value) => controller.password.value = value,
+            Obx(
+              () => CustomTextform(
+                title: "Kata Sandi",
+                textHint: "Buat kata sandi",
+                icon: "eye.png",
+                obscureText: controller.isPasswordHidden.value,
+                onIconTap: controller.togglePasswordVisibility,
+                onChanged: (value) => controller.password.value = value,
+              ),
             ),
             SizedBox(height: 37),
             CustomButton(
