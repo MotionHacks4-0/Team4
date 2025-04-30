@@ -104,7 +104,7 @@ class ProfileView extends StatelessWidget {
             CustomButton(
                 text: "Logout",
                 onPress: () {
-                  Get.toNamed(Routes.LOGIN);
+                  controller.logout();
                 },
                 col: Style.redColor,
                 borderColor: Style.redColor,
