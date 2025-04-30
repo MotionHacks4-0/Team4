@@ -55,4 +55,29 @@ class Style {
     color: textColor,
     fontWeight: FontWeight.bold,
   );
+  static TextStyle headLineStyle9 = GoogleFonts.poppins(
+    fontSize: 16,
+    color: Colors.black,
+    fontWeight: FontWeight.w500,
+  );
+  static TextStyle headLineStyle10 = GoogleFonts.poppins(
+    fontSize: 16,
+    color: Colors.white,
+    fontWeight: FontWeight.w400,
+  );
+  static TextStyle headLineStyle11 = GoogleFonts.poppins(
+    fontSize: 24,
+    color: Colors.white,
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle headLineStyle12 = GoogleFonts.poppins(
+    fontSize: 18,
+    color: Colors.black,
+    fontWeight: FontWeight.w600,
+  );
+  static TextStyle headLineStyle13 = GoogleFonts.poppins(
+    fontSize: 14,
+    color: primaryColor,
+    fontWeight: FontWeight.w400,
+  );
 }
