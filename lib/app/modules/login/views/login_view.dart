@@ -27,12 +27,21 @@ class LoginView extends GetView<LoginController> {
               ),
             ),
             SizedBox(height: 28),
-            CustomTextform(title: "Email", textHint: "Your Email"),
-            SizedBox(height: 22),
             CustomTextform(
-              title: "kata Sandi",
-              textHint: "Password",
-              icon: "eye.png",
+              title: "Email",
+              textHint: "Your Email",
+              onChanged: (val) => controller.email.value = val,
+            ),
+            SizedBox(height: 22),
+            Obx(
+              () => CustomTextform(
+                title: "kata Sandi",
+                textHint: "Password",
+                obscureText: controller.isPasswordHidden.value,
+                onChanged: (val) => controller.password.value = val,
+                icon: "eye.png",
+                onIconTap: controller.togglePasswordVisibility,
+              ),
             ),
             SizedBox(height: 10),
             Row(
@@ -59,7 +68,7 @@ class LoginView extends GetView<LoginController> {
             CustomButton(
               text: "Masuk",
               onPress: () {
-                Get.toNamed(Routes.PROFILE);
+                controller.login();
               },
               textStyle: Style.headLineStyle6,
               col: Style.primaryColor,
@@ -89,7 +98,7 @@ class LoginView extends GetView<LoginController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.toNamed(Routes.REGISTER);
+                    Get.offNamed(Routes.REGISTER);
                   },
                   child: Text(
                     "Daftar",

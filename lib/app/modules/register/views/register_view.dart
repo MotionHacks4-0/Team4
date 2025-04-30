@@ -34,19 +34,27 @@ class RegisterView extends GetView<RegisterController> {
               ),
             ),
             SizedBox(height: 28),
-            CustomTextform(title: "Nama", textHint: "Masukkan nama anda"),
+            CustomTextform(
+              title: "Nama",
+              textHint: "Masukkan nama anda",
+            ),
             SizedBox(height: 22),
-            CustomTextform(title: "Email", textHint: "Masukkan email anda"),
+            CustomTextform(
+              title: "Email",
+              textHint: "Masukkan email anda",
+              onChanged: (value) => controller.email.value = value,
+            ),
             SizedBox(height: 22),
             CustomTextform(
               title: "Kata Sandi",
               textHint: "Buat kata sandi",
               icon: "eye.png",
+              onChanged: (value) => controller.password.value = value,
             ),
             SizedBox(height: 37),
             CustomButton(
               text: "Daftar",
-              onPress: () {},
+              onPress: () => controller.register(),
               textStyle: Style.headLineStyle6,
               col: Style.primaryColor,
               borderColor: Style.primaryColor,
@@ -75,7 +83,7 @@ class RegisterView extends GetView<RegisterController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.toNamed(Routes.LOGIN);
+                    Get.offNamed(Routes.LOGIN);
                   },
                   child: Text(
                     "Masuk",
