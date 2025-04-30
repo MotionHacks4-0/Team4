@@ -1,24 +1,31 @@
 import 'package:get/get.dart';
 
+import '../modules/all_exchange_poin/bindings/all_exchange_poin_binding.dart';
+import '../modules/all_exchange_poin/views/all_exchange_poin_view.dart';
 import '../modules/bottomnavigation/bindings/bottomnavigation_binding.dart';
 import '../modules/bottomnavigation/views/bottomnavigation_view.dart';
+import '../modules/detail_barang/bindings/detail_barang_binding.dart';
+import '../modules/detail_barang/views/detail_barang_view.dart';
+import '../modules/detail_wisata.dart/bindings/detail_wisata_dart_binding.dart';
+import '../modules/detail_wisata.dart/views/detail_wisata_dart_view.dart';
 import '../modules/home/bindings/home_binding.dart';
 import '../modules/home/views/home_view.dart';
-
+import '../modules/information/bindings/information_binding.dart';
+import '../modules/information/views/information_view.dart';
 import '../modules/inputgram/bindings/inputgram_binding.dart';
 import '../modules/inputgram/views/inputgram_view.dart';
-
-
-import '../modules/volunteer/bindings/volunteer_binding.dart';
-import '../modules/volunteer/views/volunteer_view.dart';
-
 import '../modules/login/bindings/login_binding.dart';
 import '../modules/login/views/login_view.dart';
 import '../modules/onboarding/bindings/onboarding_binding.dart';
 import '../modules/onboarding/views/onboarding_view.dart';
 import '../modules/register/bindings/register_binding.dart';
 import '../modules/register/views/register_view.dart';
-
+import '../modules/setor_sampah/bindings/setor_sampah_binding.dart';
+import '../modules/setor_sampah/views/setor_sampah_view.dart';
+import '../modules/tukar_poin/bindings/tukar_poin_binding.dart';
+import '../modules/tukar_poin/views/tukar_poin_view.dart';
+import '../modules/volunteer/bindings/volunteer_binding.dart';
+import '../modules/volunteer/views/volunteer_view.dart';
 import '../widgets/splash.dart';
 
 part 'app_routes.dart';
@@ -67,6 +74,36 @@ class AppPages {
       name: _Paths.REGISTER,
       page: () => const RegisterView(),
       binding: RegisterBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAIL_WISATA_DART,
+      page: () => const DetailWisataDartView(),
+      binding: DetailWisataDartBinding(),
+    ),
+    GetPage(
+      name: _Paths.ALL_EXCHANGE_POIN,
+      page: () => const AllExchangePoinView(),
+      binding: AllExchangePoinBinding(),
+    ),
+    GetPage(
+      name: _Paths.DETAIL_BARANG,
+      page: () => const DetailBarangView(),
+      binding: DetailBarangBinding(),
+    ),
+    GetPage(
+      name: _Paths.SETOR_SAMPAH,
+      page: () => const SetorSampahView(),
+      binding: SetorSampahBinding(),
+    ),
+    GetPage(
+      name: _Paths.TUKAR_POIN,
+      page: () => const TukarPoinView(),
+      binding: TukarPoinBinding(),
+    ),
+    GetPage(
+      name: _Paths.INFORMATION,
+      page: () => const InformationView(),
+      binding: InformationBinding(),
     ),
   ];
 }
