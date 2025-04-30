@@ -23,7 +23,7 @@ class LoginController extends GetxController {
     try {
       final user = await _authService.login(email.value, password.value);
       if (user != null) {
-        Get.offNamed(Routes.PROFILE);
+        Get.offNamed(Routes.ONBOARDING);
       }
     } catch (e) {
       Get.snackbar('Login Failed', e.toString());
@@ -34,7 +34,7 @@ class LoginController extends GetxController {
     try {
       final user = await _authService.loginWithGoogle();
       if (user != null) {
-        Get.offNamed(Routes.PROFILE);
+        Get.offNamed(Routes.ONBOARDING);
       } else {
         Get.snackbar('Login Canceled', 'User canceled the Google sign-in.');
       }
