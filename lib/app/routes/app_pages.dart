@@ -106,6 +106,7 @@ class AppPages {
       name: _Paths.INFORMATION,
       page: () => const InformationView(),
       binding: InformationBinding(),
+    ),
     GetPage(
       name: _Paths.PROFILE,
       page: () => ProfileView(),
