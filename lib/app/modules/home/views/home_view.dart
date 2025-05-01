@@ -107,8 +107,11 @@ class HomeView extends GetView<HomeController> {
                           height: 15,
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            SizedBox(
+                              width: 5,
+                            ),
                             GestureDetector(
                               onTap: () {
                                 Get.to(() => const SetorSampahView());
@@ -140,6 +143,7 @@ class HomeView extends GetView<HomeController> {
                                 ],
                               ),
                             ),
+                            SizedBox(width: 40),
                             GestureDetector(
                               onTap: () {
                                 Get.to(() => const AllExchangePoinView());
@@ -171,6 +175,7 @@ class HomeView extends GetView<HomeController> {
                                 ],
                               ),
                             ),
+                            SizedBox(width: 30),
                             GestureDetector(
                               onTap: () {
                                 Get.to(() => const InformationView());
