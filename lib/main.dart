@@ -1,3 +1,4 @@
+import 'package:eco_trip/app/modules/detail_barang/views/detail_barang_view.dart';
 import 'package:eco_trip/firebase_options.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Application",
       getPages: AppPages.routes,
-      home: const SplashScreen(),
+      home: const DetailBarangView(),
     );
   }
 }
