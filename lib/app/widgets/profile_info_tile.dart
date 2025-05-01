@@ -7,6 +7,7 @@ class ProfileInfoTile extends StatelessWidget {
   final String value;
   final bool editable;
   final bool copyable;
+  final VoidCallback? onTap;
 
   const ProfileInfoTile({
     super.key,
@@ -14,6 +15,7 @@ class ProfileInfoTile extends StatelessWidget {
     required this.value,
     this.editable = false,
     this.copyable = false,
+    this.onTap,
   });
 
   @override
@@ -34,7 +36,16 @@ class ProfileInfoTile extends StatelessWidget {
         Expanded(
           child: Text(
             value,
-            style: Style.headLineStyle5,
+            style: value == 'Tambah Nama' ||
+                    value == 'Tambah Nama pengguna' ||
+                    value == 'Tambah Bio' ||
+                    value == 'Tambah Id' ||
+                    value == 'Tambah No.Telp' ||
+                    value == 'Tambah tanggal lahir' ||
+                    value == 'Tambah gender' ||
+                    value == 'Tambah email'
+                ? Style.headLineStyle5.copyWith(color: Colors.grey)
+                : Style.headLineStyle5,
             overflow: TextOverflow.ellipsis,
           ),
         ),
@@ -52,8 +63,8 @@ class ProfileInfoTile extends StatelessWidget {
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text("Copied to clipboard")),
                 );
-              } else if (editable) {
-                // Add your navigation or dialog for editing here
+              } else if (editable && onTap != null) {
+                onTap!();
               }
             },
           ),
