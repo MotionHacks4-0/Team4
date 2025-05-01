@@ -1,3 +1,5 @@
+import 'package:eco_trip/app/modules/volunteer_detail/bindings/volunteer_detail_binding.dart';
+import 'package:eco_trip/app/modules/volunteer_detail/views/volunteer_detail_view.dart';
 import 'package:get/get.dart';
 
 import '../modules/all_exchange_poin/bindings/all_exchange_poin_binding.dart';
@@ -40,7 +42,7 @@ class AppPages {
   static final routes = [
     GetPage(
       name: _Paths.HOME,
-      page: () => const HomeView(),
+      page: () => HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
@@ -111,6 +113,11 @@ class AppPages {
       name: _Paths.PROFILE,
       page: () => ProfileView(),
       binding: ProfileBinding(),
+    ),
+    GetPage(
+      name: _Paths.VOLUNTEER_DETAIL,
+      page: () => VolunteerDetailView(),
+      binding: VolunteerDetailBinding(),
     ),
   ];
 }

@@ -1,3 +1,5 @@
+import 'package:eco_trip/app/widgets/custom_search_bar.dart';
+import 'package:eco_trip/app/widgets/custom_volunteer_tiles.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
@@ -9,14 +11,38 @@ class VolunteerView extends GetView<VolunteerController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('VolunteerView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'VolunteerView is working',
-          style: TextStyle(fontSize: 20),
+      backgroundColor: Colors.white,
+      body: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            CustomSearchBar(
+              controller: controller.searchController,
+              onSearch: controller.filterVolunteers,
+            ),
+            SizedBox(height: 30),
+            Expanded(
+              child: Obx(
+                () {
+                  return ListView.builder(
+                    itemCount: controller.filteredList.length,
+                    itemBuilder: (context, index) {
+                      return Column(
+                        children: [
+                          Center(
+                            child: CustomVolunteerTiles(
+                              volunteerModel: controller.filteredList[index],
+                            ),
+                          ),
+                          SizedBox(height: 16), // Space after each tile
+                        ],
+                      );
+                    },
+                  );
+                },
+              ),
+            ),
+          ],
         ),
       ),
     );

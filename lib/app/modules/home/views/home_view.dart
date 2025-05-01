@@ -1,6 +1,7 @@
 import 'package:eco_trip/app/modules/all_exchange_poin/views/all_exchange_poin_view.dart';
 import 'package:eco_trip/app/modules/home/widgets/wisata_mitra_list.dart';
 import 'package:eco_trip/app/modules/information/views/information_view.dart';
+import 'package:eco_trip/app/modules/profile/controllers/profile_controller.dart';
 import 'package:eco_trip/app/modules/tukar_poin/views/tukar_poin_view.dart';
 import 'package:eco_trip/app/routes/app_pages.dart';
 import 'package:eco_trip/app/utils/app_style.dart';
@@ -15,7 +16,8 @@ import '../widgets/mitra_list.dart';
 import '../widgets/poin_list.dart';
 
 class HomeView extends GetView<HomeController> {
-  const HomeView({super.key});
+  late final ProfileController userController = Get.find<ProfileController>();
+  HomeView({super.key});
   @override
   Widget build(BuildContext context) {
     final SetorSampahController setorController =
@@ -42,7 +44,7 @@ class HomeView extends GetView<HomeController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hi, Veiron',
+                    'Hi, ${userController.userName}',
                     style: Style.headLineStyle9,
                   ),
                 ],
