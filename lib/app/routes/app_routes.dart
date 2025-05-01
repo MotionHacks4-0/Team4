@@ -11,6 +11,12 @@ abstract class Routes {
   static const VOLUNTEER = _Paths.VOLUNTEER;
   static const LOGIN = _Paths.LOGIN;
   static const REGISTER = _Paths.REGISTER;
+  static const DETAIL_WISATA_DART = _Paths.DETAIL_WISATA_DART;
+  static const ALL_EXCHANGE_POIN = _Paths.ALL_EXCHANGE_POIN;
+  static const DETAIL_BARANG = _Paths.DETAIL_BARANG;
+  static const SETOR_SAMPAH = _Paths.SETOR_SAMPAH;
+  static const TUKAR_POIN = _Paths.TUKAR_POIN;
+  static const INFORMATION = _Paths.INFORMATION;
   static const PROFILE = _Paths.PROFILE;
 }
 
@@ -24,5 +30,11 @@ abstract class _Paths {
   static const VOLUNTEER = '/volunteer';
   static const LOGIN = '/login';
   static const REGISTER = '/register';
+  static const DETAIL_WISATA_DART = '/detail-wisata-dart';
+  static const ALL_EXCHANGE_POIN = '/all-exchange-poin';
+  static const DETAIL_BARANG = '/detail-barang';
+  static const SETOR_SAMPAH = '/setor-sampah';
+  static const TUKAR_POIN = '/tukar-poin';
+  static const INFORMATION = '/information';
   static const PROFILE = '/profile';
 }
