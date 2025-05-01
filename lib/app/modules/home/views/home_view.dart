@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../setor_sampah/controllers/setor_sampah_controller.dart';
 import '../../setor_sampah/views/setor_sampah_view.dart';
 import '../controllers/home_controller.dart';
 import '../widgets/mitra_list.dart';
@@ -17,6 +18,9 @@ class HomeView extends GetView<HomeController> {
   const HomeView({super.key});
   @override
   Widget build(BuildContext context) {
+    final SetorSampahController setorController =
+        Get.find<SetorSampahController>();
+
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
@@ -90,10 +94,10 @@ class HomeView extends GetView<HomeController> {
                           'Poinmu',
                           style: Style.headLineStyle10,
                         ),
-                        Text(
-                          '1000 Poin',
-                          style: Style.headLineStyle11,
-                        ),
+                        Obx(() => Text(
+                              '${setorController.totalPoin.value} Poin',
+                              style: Style.headLineStyle11,
+                            )),
                         const SizedBox(
                           height: 15,
                         ),
