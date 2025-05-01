@@ -15,7 +15,7 @@ class CustomSearchBar extends StatelessWidget {
         children: [
           Container(
             height: 45,
-            width: 320,
+            width: 300,
             padding: const EdgeInsets.symmetric(horizontal: 16),
             decoration: BoxDecoration(
               color: Color(0xFFF0F0F0),
@@ -40,7 +40,7 @@ class CustomSearchBar extends StatelessWidget {
               borderRadius: BorderRadius.circular(10),
             ),
             child: IconButton(
-              icon: Icon(Icons.search, color: Colors.black54),
+              icon: Icon(Icons.search, color: Colors.white),
               onPressed: () {
                 onSearch(controller.text);
               },
