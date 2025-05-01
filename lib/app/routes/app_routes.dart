@@ -18,6 +18,8 @@ abstract class Routes {
   static const TUKAR_POIN = _Paths.TUKAR_POIN;
   static const INFORMATION = _Paths.INFORMATION;
   static const PROFILE = _Paths.PROFILE;
+
+  static const VOLUNTEER_DETAIL = _Paths.VOLUNTEER_DETAIL;
 }
 
 abstract class _Paths {
@@ -37,4 +39,6 @@ abstract class _Paths {
   static const TUKAR_POIN = '/tukar-poin';
   static const INFORMATION = '/information';
   static const PROFILE = '/profile';
+
+  static const VOLUNTEER_DETAIL = '/volunteer-detail';
 }

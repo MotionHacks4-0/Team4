@@ -1,4 +1,5 @@
 import 'package:eco_trip/app/modules/home/views/home_view.dart';
+import 'package:eco_trip/app/modules/profile/controllers/profile_controller.dart';
 import 'package:eco_trip/app/utils/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -220,7 +221,7 @@ class _SetorGramState extends State<SetorGram> {
             text: "Setorkan",
             onPress: () {
               int poin = weight;
-              controller.totalPoin.value += poin;
+              controller.setorSampah(weight);
               showDialog(
                 context: context,
                 barrierDismissible: false,

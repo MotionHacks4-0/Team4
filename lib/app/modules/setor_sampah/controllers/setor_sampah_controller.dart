@@ -1,3 +1,4 @@
+import 'package:eco_trip/app/modules/profile/controllers/profile_controller.dart';
 import 'package:get/get.dart';
 
 class SetorSampahController extends GetxController {
@@ -6,7 +7,10 @@ class SetorSampahController extends GetxController {
 
   void setorSampah(int berat) {
     int poinBaru = berat * 10;
-    totalPoin.value += poinBaru;
+    // Call profile controller and update its totalPoin
+    final profile = Get.find<ProfileController>();
+    profile.totalPoin.value += poinBaru;
+    profile.box.put('totalPoin', profile.totalPoin.value); // persist
   }
 
   setIndex(index) {
