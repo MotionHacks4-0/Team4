@@ -1,3 +1,4 @@
+import 'package:eco_trip/app/modules/profile/controllers/profile_controller.dart';
 import 'package:eco_trip/app/routes/app_pages.dart';
 import 'package:eco_trip/app/services/auth_service.dart';
 import 'package:get/get.dart';
