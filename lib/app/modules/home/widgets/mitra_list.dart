@@ -1,11 +1,13 @@
 import 'package:eco_trip/app/modules/detail_wisata.dart/views/detail_wisata_dart_view.dart';
+import 'package:eco_trip/app/modules/home/controllers/home_controller.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import 'wisata_mitra_list.dart';
 
 class MitraList extends StatelessWidget {
-  const MitraList({
+  final controller = Get.find<HomeController>();
+  MitraList({
     super.key,
   });
 
@@ -22,7 +24,9 @@ class MitraList extends StatelessWidget {
               image: 'assets/images/mitra1.png',
               press: () {
                 Get.to(
-                  () => DetailWisataDartView(), // panggil page-nya
+                  () => DetailWisataDartView(
+                      pariwisata:
+                          controller.pariwisatas[0]), // panggil page-nya
                   transition: Transition.cupertino,
                   duration: Duration(milliseconds: 900),
                 );
@@ -30,15 +34,39 @@ class MitraList extends StatelessWidget {
             ),
             WisataMitraList(
               image: 'assets/images/mitra2.png',
-              press: () {},
+              press: () {
+                Get.to(
+                  () => DetailWisataDartView(
+                      pariwisata:
+                          controller.pariwisatas[1]), // panggil page-nya
+                  transition: Transition.cupertino,
+                  duration: Duration(milliseconds: 900),
+                );
+              },
             ),
             WisataMitraList(
               image: 'assets/images/mitra3.png',
-              press: () {},
+              press: () {
+                Get.to(
+                  () => DetailWisataDartView(
+                      pariwisata:
+                          controller.pariwisatas[2]), // panggil page-nya
+                  transition: Transition.cupertino,
+                  duration: Duration(milliseconds: 900),
+                );
+              },
             ),
             WisataMitraList(
               image: 'assets/images/mitra4.png',
-              press: () {},
+              press: () {
+                Get.to(
+                  () => DetailWisataDartView(
+                      pariwisata:
+                          controller.pariwisatas[3]), // panggil page-nya
+                  transition: Transition.cupertino,
+                  duration: Duration(milliseconds: 900),
+                );
+              },
             ),
           ],
         ),
