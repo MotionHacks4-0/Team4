@@ -142,7 +142,7 @@ class HomeView extends GetView<HomeController> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Get.to(() => const TukarPoinView());
+                                Get.to(() => const AllExchangePoinView());
                               },
                               child: Column(
                                 children: [
@@ -228,11 +228,7 @@ class HomeView extends GetView<HomeController> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Get.to(
-                          () => AllExchangePoinView(),
-                          transition: Transition.cupertino,
-                          duration: const Duration(milliseconds: 900),
-                        );
+                        Get.toNamed(Routes.ALL_EXCHANGE_POIN);
                       },
                       child: Text(
                         'Lihat Semua',
