@@ -1,7 +1,9 @@
-import 'package:eco_trip/app/modules/profile/controllers/profile_controller.dart';
 import 'package:get/get.dart';
 
-class HomeController extends GetxController {
+class VolunteerDetailController extends GetxController {
+  //TODO: Implement VolunteerDetailController
+
+  final count = 0.obs;
   @override
   void onInit() {
     super.onInit();
@@ -16,4 +18,6 @@ class HomeController extends GetxController {
   void onClose() {
     super.onClose();
   }
+
+  void increment() => count.value++;
 }
