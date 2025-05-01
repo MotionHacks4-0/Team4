@@ -1,7 +1,10 @@
+import 'package:eco_trip/app/modules/setor_sampah/widgets/setor_gram.dart';
 import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import '../../../utils/app_style.dart';
+import '../../../widgets/custom_button.dart';
 import '../controllers/setor_sampah_controller.dart';
 
 class SetorSampahView extends GetView<SetorSampahController> {
@@ -9,15 +12,33 @@ class SetorSampahView extends GetView<SetorSampahController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('SetorSampahView'),
-        centerTitle: true,
-      ),
-      body: const Center(
-        child: Text(
-          'SetorSampahView is working',
-          style: TextStyle(fontSize: 20),
-        ),
+      appBar: AppBar(),
+      body: ListView(
+        padding: EdgeInsets.symmetric(horizontal: 24),
+        children: [
+          const SizedBox(height: 80),
+          Center(
+            child: Image.asset(
+              'assets/images/setor1.png',
+            ),
+          ),
+          const SizedBox(height: 40),
+          Text(
+            ' Pastikan anda memeriksa lokasi penyetoran terdekat sebelum membawa sampah anda.',
+            style: Style.headLineStyle9,
+            textAlign: TextAlign.center,
+          ),
+          const SizedBox(height: 70),
+          CustomButton(
+            text: "Saya mengerti",
+            onPress: () {
+              Get.to(() => const SetorGram());
+            },
+            textStyle: Style.headLineStyle10,
+            col: Style.primaryColor,
+            borderColor: Style.primaryColor,
+          ),
+        ],
       ),
     );
   }

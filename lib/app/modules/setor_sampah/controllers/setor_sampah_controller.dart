@@ -1,23 +1,17 @@
 import 'package:get/get.dart';
 
 class SetorSampahController extends GetxController {
-  //TODO: Implement SetorSampahController
+  RxString setAmmountIndex = ''.obs;
+  var totalPoin = 0.obs;
 
-  final count = 0.obs;
-  @override
-  void onInit() {
-    super.onInit();
+  void setorSampah(int berat) {
+    int poinBaru = berat * 10;
+    totalPoin.value += poinBaru;
   }
 
-  @override
-  void onReady() {
-    super.onReady();
+  setIndex(index) {
+    print(index);
+    setAmmountIndex.value = index;
+    update();
   }
-
-  @override
-  void onClose() {
-    super.onClose();
-  }
-
-  void increment() => count.value++;
 }
