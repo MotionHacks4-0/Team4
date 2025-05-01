@@ -100,7 +100,7 @@ class HomeView extends GetView<HomeController> {
                           style: Style.headLineStyle10,
                         ),
                         Obx(() => Text(
-                              '${setorController.totalPoin.value} Poin',
+                              '${userController.totalPoin.value} Poin',
                               style: Style.headLineStyle11,
                             )),
                         const SizedBox(
