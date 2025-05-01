@@ -31,11 +31,11 @@ class HomeView extends GetView<HomeController> {
         elevation: 0,
         centerTitle: false,
         title: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 12.0),
+          padding: const EdgeInsets.symmetric(horizontal: 10.0, vertical: 12.0),
           child: Row(
             children: [
               Image.asset(
-                'assets/images/leaf.png', // ganti dengan path asset kamu
+                'assets/images/leaf.png', 
                 height: 30,
                 width: 30,
               ),
