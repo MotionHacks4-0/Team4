@@ -15,13 +15,17 @@ class ProfileController extends GetxController {
   var gender = 'Tambah gender'.obs;
   var email = 'Tambah email'.obs;
   var photoURL = ''.obs;
+  var totalPoin = 0.obs;
 
-  void logout() {
+  void logout() async {
     // Add logout logic here (e.g., clear user session, navigate to login)
+
+    Get.delete<ProfileController>();
+    await _auth.signOut();
     Get.offAllNamed('/login');
   }
 
-  void setupUserBox() async {
+  Future<void> setupUserBox() async {
     final user = _auth.currentUser;
     if (user != null) {
       uid.value = user.uid;
@@ -37,6 +41,7 @@ class ProfileController extends GetxController {
     box.put('phoneNumber', phoneNumber.value);
     box.put('birthDate', birthDate.value);
     box.put('gender', gender.value);
+    box.put('totalPoin', totalPoin.value);
   }
 
   void loadFromHive() {
@@ -46,6 +51,7 @@ class ProfileController extends GetxController {
     phoneNumber.value = box.get('phoneNumber', defaultValue: phoneNumber.value);
     birthDate.value = box.get('birthDate', defaultValue: birthDate.value);
     gender.value = box.get('gender', defaultValue: gender.value);
+    totalPoin.value = box.get('totalPoin', defaultValue: 0);
   }
 
   void loadUserData() {

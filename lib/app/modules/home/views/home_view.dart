@@ -44,7 +44,10 @@ class HomeView extends GetView<HomeController> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    'Hi, ${userController.userName}',
+                    userController.userName.value == "Tambah Nama pengguna" ||
+                            userController.userName.value == ""
+                        ? 'Hi, Sahabat lingkungan'
+                        : 'Hi, ${userController.userName.value}',
                     style: Style.headLineStyle9,
                   ),
                 ],
