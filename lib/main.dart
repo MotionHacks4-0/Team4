@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'package:get/get.dart';
 
+import 'app/modules/setor_sampah/controllers/setor_sampah_controller.dart';
 import 'app/routes/app_pages.dart';
 import 'app/widgets/splash.dart';
 
@@ -12,7 +13,9 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(MyApp());
+
+  Get.put(SetorSampahController());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -24,7 +27,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Application",
       getPages: AppPages.routes,
-      home: const SplashScreen(), // tampil dulu, lalu navigasi manual
+      home: const SplashScreen(),
     );
   }
 }
