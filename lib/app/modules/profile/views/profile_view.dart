@@ -1,9 +1,11 @@
+import 'package:eco_trip/app/modules/edit_profile_field/views/edit_profile_field_view.dart';
 import 'package:eco_trip/app/routes/app_pages.dart';
 import 'package:eco_trip/app/utils/app_style.dart';
 import 'package:eco_trip/app/widgets/custom_button.dart';
 import 'package:eco_trip/app/widgets/profile_info_tile.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:google_fonts/google_fonts.dart';
 import '../controllers/profile_controller.dart';
 
 class ProfileView extends StatelessWidget {
@@ -16,8 +18,8 @@ class ProfileView extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: Style.whiteColor,
         title: Text(
-          "Profil",
-          style: TextStyle(fontWeight: FontWeight.bold),
+          "Pengaturan",
+          style: Style.textStyle2,
         ),
         centerTitle: true,
       ),
@@ -28,7 +30,7 @@ class ProfileView extends StatelessWidget {
             SizedBox(height: 10),
             CircleAvatar(
               radius: 65,
-              backgroundImage: AssetImage('assets/images/profile.jpg'),
+              backgroundImage: AssetImage('assets/images/fotoprofile.png'),
             ),
             SizedBox(height: 10),
             Text(
@@ -59,20 +61,59 @@ class ProfileView extends StatelessWidget {
                 style: Style.textStyle2,
               ),
             ),
-            ProfileInfoTile(
-              label: 'Nama',
-              value: controller.displayName.value,
-              editable: true,
+            Obx(
+              () => ProfileInfoTile(
+                label: 'Nama',
+                value: controller.displayName.value,
+                editable: true,
+                onTap: () {
+                  Get.to(() => EditProfileFieldView(
+                        title: 'Edit Nama',
+                        label: 'Nama',
+                        field: controller.displayName,
+                        onSave: (val) {
+                          controller.displayName.value = val;
+                          controller.saveToHive();
+                        },
+                      ));
+                },
+              ),
             ),
-            ProfileInfoTile(
-              label: 'Nama Pengguna',
-              value: 'Masukkan nama pengguna',
-              editable: true,
+            Obx(
+              () => ProfileInfoTile(
+                label: 'Nama Pengguna',
+                value: controller.userName.value,
+                editable: true,
+                onTap: () {
+                  Get.to(() => EditProfileFieldView(
+                        title: 'Edit Nama Pengguna',
+                        label: 'Nama Pengguna',
+                        field: controller.userName,
+                        onSave: (val) {
+                          controller.userName.value = val;
+                          controller.saveToHive();
+                        },
+                      ));
+                },
+              ),
             ),
-            ProfileInfoTile(
-              label: 'Bio',
-              value: 'Masukkan biomu',
-              editable: true,
+            Obx(
+              () => ProfileInfoTile(
+                label: 'Bio',
+                value: controller.bio.value,
+                editable: true,
+                onTap: () {
+                  Get.to(() => EditProfileFieldView(
+                        title: 'Edit bio',
+                        label: 'Bio',
+                        field: controller.bio,
+                        onSave: (val) {
+                          controller.bio.value = val;
+                          controller.saveToHive();
+                        },
+                      ));
+                },
+              ),
             ),
             Divider(height: 30),
             ProfileInfoTile(
@@ -80,20 +121,59 @@ class ProfileView extends StatelessWidget {
               value: controller.uid.value,
               copyable: true,
             ),
-            ProfileInfoTile(
-              label: 'Telepon',
-              value: controller.phoneNumber.value,
-              editable: true,
+            Obx(
+              () => ProfileInfoTile(
+                label: 'Telepon',
+                value: controller.phoneNumber.value,
+                editable: true,
+                onTap: () {
+                  Get.to(() => EditProfileFieldView(
+                        title: 'Edit Nomor Telepon',
+                        label: 'No.Telp',
+                        field: controller.phoneNumber,
+                        onSave: (val) {
+                          controller.phoneNumber.value = val;
+                          controller.saveToHive();
+                        },
+                      ));
+                },
+              ),
             ),
-            ProfileInfoTile(
-              label: 'Tanggal Lahir',
-              value: 'Masukkan tanggal lahir',
-              editable: true,
+            Obx(
+              () => ProfileInfoTile(
+                label: 'Tanggal Lahir',
+                value: controller.birthDate.value,
+                editable: true,
+                onTap: () {
+                  Get.to(() => EditProfileFieldView(
+                        title: 'Edit Tanggal Lahir',
+                        label: 'Tanggal lahir',
+                        field: controller.birthDate,
+                        onSave: (val) {
+                          controller.birthDate.value = val;
+                          controller.saveToHive();
+                        },
+                      ));
+                },
+              ),
             ),
-            ProfileInfoTile(
-              label: 'Kelamin',
-              value: 'Masukkan jenis kelamin',
-              editable: true,
+            Obx(
+              () => ProfileInfoTile(
+                label: 'Kelamin',
+                value: controller.gender.value,
+                editable: true,
+                onTap: () {
+                  Get.to(() => EditProfileFieldView(
+                        title: 'Edit Gender',
+                        label: 'Gender',
+                        field: controller.gender,
+                        onSave: (val) {
+                          controller.gender.value = val;
+                          controller.saveToHive();
+                        },
+                      ));
+                },
+              ),
             ),
             SizedBox(height: 10),
             ProfileInfoTile(
@@ -102,13 +182,16 @@ class ProfileView extends StatelessWidget {
             ),
             SizedBox(height: 40),
             CustomButton(
-                text: "Logout",
+                text: "Log Out",
                 onPress: () {
                   controller.logout();
                 },
                 col: Style.redColor,
                 borderColor: Style.redColor,
-                textStyle: Style.headLineStyle6)
+                textStyle: GoogleFonts.poppins(
+                    fontSize: 14,
+                    color: Colors.white,
+                    fontWeight: FontWeight.w600))
           ],
         ),
       ),
