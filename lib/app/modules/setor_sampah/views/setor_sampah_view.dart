@@ -12,11 +12,15 @@ class SetorSampahView extends GetView<SetorSampahController> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(),
+      backgroundColor: Colors.white,
+      appBar: AppBar(
+        backgroundColor: Colors.white,
+        toolbarHeight: 80,
+      ),
       body: ListView(
         padding: EdgeInsets.symmetric(horizontal: 24),
         children: [
-          const SizedBox(height: 80),
+          const SizedBox(height: 60),
           Center(
             child: Image.asset(
               'assets/images/setor1.png',

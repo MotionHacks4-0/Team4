@@ -3,6 +3,8 @@ import 'package:eco_trip/app/modules/home/widgets/exchange_poin_list.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
+import '../../../routes/app_pages.dart';
+
 class PoinList extends StatelessWidget {
   const PoinList({super.key});
 
@@ -18,11 +20,7 @@ class PoinList extends StatelessWidget {
             ExchangePoinList(
               image: 'assets/images/homepoin1.png',
               press: () {
-                Get.to(
-                  () => DetailBarangView(),
-                  transition: Transition.cupertino,
-                  duration: Duration(milliseconds: 900),
-                );
+                Get.toNamed(Routes.DETAIL_BARANG);
               },
             ),
             ExchangePoinList(
