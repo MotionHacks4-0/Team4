@@ -41,7 +41,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Application",
       getPages: AppPages.routes,
-      home: const DetailBarangView(),
+      home: const SplashScreen(),
     );
   }
 }
