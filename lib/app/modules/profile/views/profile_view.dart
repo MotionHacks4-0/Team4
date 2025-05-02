@@ -10,6 +10,7 @@ import '../controllers/profile_controller.dart';
 
 class ProfileView extends StatelessWidget {
   final controller = Get.put(ProfileController());
+  final profile = Get.find<ProfileController>();
 
   @override
   Widget build(BuildContext context) {
@@ -45,9 +46,11 @@ class ProfileView extends StatelessWidget {
                   'Total Sampah',
                   style: Style.headLineStyle12,
                 ),
-                Text(
-                  '12.8 Kg',
-                  style: Style.headLineStyle12,
+                Obx(
+                  () => Text(
+                    '${(profile.totalSampah.value / 1000).toStringAsFixed(1)} Kg',
+                    style: Style.headLineStyle12,
+                  ),
                 ),
               ],
             ),
@@ -55,7 +58,7 @@ class ProfileView extends StatelessWidget {
 
             // Editable Section
             Padding(
-              padding: const EdgeInsets.only(right: 190),
+              padding: const EdgeInsets.only(right: 170),
               child: Text(
                 "Informasi Pengguna",
                 style: Style.textStyle2,

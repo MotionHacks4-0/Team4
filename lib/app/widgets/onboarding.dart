@@ -8,11 +8,7 @@ class OnBoardingView extends StatelessWidget {
   final String? title;
   final String? subtitle;
 
-  const OnBoardingView({
-    this.image,
-    this.title,
-    this.subtitle
-  });
+  const OnBoardingView({this.image, this.title, this.subtitle});
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +31,11 @@ class OnBoardingView extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Text('${title}',
-                  style: Style.headLineStyle2),
+              Text(
+                '${title}',
+                style: Style.headLineStyle2,
+                textAlign: TextAlign.center,
+              ),
               SizedBox(
                 height: 20,
               ),

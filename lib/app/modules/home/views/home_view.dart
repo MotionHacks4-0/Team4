@@ -1,8 +1,5 @@
-import 'package:eco_trip/app/modules/all_exchange_poin/views/all_exchange_poin_view.dart';
-import 'package:eco_trip/app/modules/home/widgets/wisata_mitra_list.dart';
 import 'package:eco_trip/app/modules/information/views/information_view.dart';
 import 'package:eco_trip/app/modules/profile/controllers/profile_controller.dart';
-import 'package:eco_trip/app/modules/tukar_poin/views/tukar_poin_view.dart';
 import 'package:eco_trip/app/routes/app_pages.dart';
 import 'package:eco_trip/app/utils/app_style.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +7,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 import '../../setor_sampah/controllers/setor_sampah_controller.dart';
-import '../../setor_sampah/views/setor_sampah_view.dart';
 import '../controllers/home_controller.dart';
 import '../widgets/mitra_list.dart';
 import '../widgets/poin_list.dart';
@@ -35,7 +31,7 @@ class HomeView extends GetView<HomeController> {
           child: Row(
             children: [
               Image.asset(
-                'assets/images/leaf.png', 
+                'assets/images/leaf.png',
                 height: 30,
                 width: 30,
               ),
@@ -107,11 +103,14 @@ class HomeView extends GetView<HomeController> {
                           height: 15,
                         ),
                         Row(
-                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          mainAxisAlignment: MainAxisAlignment.center,
                           children: [
+                            SizedBox(
+                              width: 5,
+                            ),
                             GestureDetector(
                               onTap: () {
-                                Get.to(() => const SetorSampahView());
+                                Get.toNamed(Routes.SETOR_SAMPAH);
                               },
                               child: Column(
                                 children: [
@@ -125,8 +124,7 @@ class HomeView extends GetView<HomeController> {
                                     child: Center(
                                       child: Image.asset(
                                         'assets/icons/bin.png',
-                                        width:
-                                            30, // Ukuran ikon sesuaikan kebutuhan
+                                        width: 30,
                                         height: 30,
                                         fit: BoxFit.contain,
                                       ),
@@ -140,9 +138,10 @@ class HomeView extends GetView<HomeController> {
                                 ],
                               ),
                             ),
+                            SizedBox(width: 40),
                             GestureDetector(
                               onTap: () {
-                                Get.to(() => const AllExchangePoinView());
+                                Get.toNamed(Routes.ALL_EXCHANGE_POIN);
                               },
                               child: Column(
                                 children: [
@@ -171,6 +170,7 @@ class HomeView extends GetView<HomeController> {
                                 ],
                               ),
                             ),
+                            SizedBox(width: 30),
                             GestureDetector(
                               onTap: () {
                                 Get.to(() => const InformationView());
