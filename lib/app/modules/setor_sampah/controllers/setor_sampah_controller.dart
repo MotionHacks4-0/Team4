@@ -6,6 +6,8 @@ class SetorSampahController extends GetxController {
   var totalPoin = 0.obs;
 
   void setorSampah(int berat) {
+    int poinBaru = berat;
+    // Call profile controller and update its totalPoin
     final profile = Get.find<ProfileController>();
     profile.tambahPoinDanSampah(berat);
   }
