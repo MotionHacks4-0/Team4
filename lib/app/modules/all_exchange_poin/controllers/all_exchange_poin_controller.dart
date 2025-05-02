@@ -14,23 +14,47 @@ class AllExchangePoinController extends GetxController {
   void onInit() {
     super.onInit();
     allItems.assignAll([
-      const TukarPoin(
+      TukarPoin(
         imagePath: 'assets/images/product1.png',
         title: 'Ancol Bantal Cushion',
         poin: 500,
         lokasi: 'Ancol',
+        onTap: () {
+          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+            'image': 'assets/images/product1.png',
+            'name': 'Ancol Bantal Cushion',
+            'poin': 500,
+            'location': 'Ancol',
+          });
+        },
       ),
-      const TukarPoin(
+      TukarPoin(
         imagePath: 'assets/images/product2.png',
         title: 'Voucher Bobocabin...',
         poin: 1500,
         lokasi: 'Batu Karas',
+        onTap: () {
+          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+            'image': 'assets/images/product2.png',
+            'name': 'Voucher Bobocabin...',
+            'poin': 1500,
+            'location': 'Batu Karas',
+          });
+        },
       ),
-      const TukarPoin(
+      TukarPoin(
         imagePath: 'assets/images/product3.png',
         title: 'Tas Eco-Friendly',
         poin: 100,
         lokasi: 'Pengandaran',
+        onTap: () {
+          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+            'image': 'assets/images/product3.png',
+            'name': 'Tas Eco-Friendly',
+            'poin': 100,
+            'location': 'Pengandaran',
+          });
+        },
       ),
       TukarPoin(
         imagePath: 'assets/images/product4.png',
@@ -38,34 +62,40 @@ class AllExchangePoinController extends GetxController {
         poin: 550,
         lokasi: 'Ancol',
         onTap: () {
-          Get.toNamed(Routes.DETAIL_BARANG);
+          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+            'image': 'assets/images/product4.png',
+            'name': 'Ancol Bantal Plushie',
+            'poin': 550,
+            'location': 'Ancol',
+          });
         },
       ),
-      const TukarPoin(
+      TukarPoin(
         imagePath: 'assets/images/product5.png',
         title: 'Air Mineral',
         poin: 10,
         lokasi: 'Pengandaran',
+        onTap: () {
+          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+            'image': 'assets/images/product5.png',
+            'name': 'Air Mineral',
+            'poin': 10,
+            'location': 'Pengandaran',
+          });
+        },
       ),
-      const TukarPoin(
+      TukarPoin(
         imagePath: 'assets/images/product6.png',
         title: 'Ancol Key Chain',
         poin: 150,
         lokasi: 'Ancol',
-      ),
-      const TukarPoin(
-        imagePath: 'assets/images/product3.png',
-        title: 'Tas Eco-Friendly',
-        poin: 100,
-        lokasi: 'Pengandaran',
-      ),
-      TukarPoin(
-        imagePath: 'assets/images/product4.png',
-        title: 'Ancol Bantal Plushie',
-        poin: 550,
-        lokasi: 'Ancol',
         onTap: () {
-          Get.toNamed(Routes.DETAIL_BARANG);
+          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+            'image': 'assets/images/product6.png',
+            'name': 'Ancol Key Chain',
+            'poin': 150,
+            'location': 'Ancol',
+          });
         },
       ),
     ]);
