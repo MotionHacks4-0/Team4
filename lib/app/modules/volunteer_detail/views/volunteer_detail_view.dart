@@ -44,7 +44,7 @@ class VolunteerDetailView extends StatelessWidget {
               ),
               const SizedBox(height: 4),
               Padding(
-                padding: const EdgeInsets.only(right: 285),
+                padding: const EdgeInsets.only(right: 266),
                 child: Text(
                   volunteer.countDown,
                   style: TextStyle(
@@ -56,7 +56,7 @@ class VolunteerDetailView extends StatelessWidget {
               ),
               const SizedBox(height: 12),
               Padding(
-                padding: const EdgeInsets.only(right: 219),
+                padding: const EdgeInsets.only(right: 200),
                 child: Text(
                   "Deskripsi kegiatan",
                   style: GoogleFonts.poppins(
