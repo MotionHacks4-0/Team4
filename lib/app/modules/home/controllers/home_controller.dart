@@ -1,4 +1,5 @@
 import 'package:eco_trip/app/models/pariwisata_model.dart';
+import 'package:eco_trip/app/modules/profile/controllers/profile_controller.dart';
 import 'package:get/get.dart';
 
 class HomeController extends GetxController {
