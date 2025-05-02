@@ -20,14 +20,15 @@ class RegisterView extends GetView<RegisterController> {
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             Padding(
-              padding: EdgeInsets.only(right: 0),
+              padding: EdgeInsets.only(right: 40),
               child: Text(
                 "Ayo gabung bersama kami,",
-                style: Style.headLineStyle10,
+                style: Style.headLineStyle2,
               ),
             ),
+            SizedBox(height: 10),
             Padding(
-              padding: EdgeInsets.only(right: 170),
+              padding: EdgeInsets.only(right: 140),
               child: Text(
                 "Masukkan data diri anda",
                 style: Style.headLineStyle9,

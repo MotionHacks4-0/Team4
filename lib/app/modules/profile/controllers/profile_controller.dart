@@ -16,6 +16,7 @@ class ProfileController extends GetxController {
   var email = 'Tambah email'.obs;
   var photoURL = ''.obs;
   var totalPoin = 0.obs;
+  RxInt totalSampah = 0.obs;
 
   void logout() async {
     // Add logout logic here (e.g., clear user session, navigate to login)
@@ -42,6 +43,7 @@ class ProfileController extends GetxController {
     box.put('birthDate', birthDate.value);
     box.put('gender', gender.value);
     box.put('totalPoin', totalPoin.value);
+    box.put('totalSampah', totalSampah.value);
   }
 
   void loadFromHive() {
@@ -52,6 +54,7 @@ class ProfileController extends GetxController {
     birthDate.value = box.get('birthDate', defaultValue: birthDate.value);
     gender.value = box.get('gender', defaultValue: gender.value);
     totalPoin.value = box.get('totalPoin', defaultValue: 0);
+    totalSampah.value = box.get('totalSampah', defaultValue: 0);
   }
 
   void loadUserData() {
@@ -64,6 +67,20 @@ class ProfileController extends GetxController {
       photoURL.value = user.photoURL ?? '';
     }
     loadFromHive();
+  }
+
+  void kurangiPoin(int jumlah) {
+    if (totalPoin.value >= jumlah) {
+      totalPoin.value -= jumlah;
+      box.put('totalPoin', totalPoin.value);
+    }
+  }
+
+  void tambahPoinDanSampah(int gram) {
+    totalPoin.value += gram;
+    totalSampah.value += gram;
+    box.put('totalPoin', totalPoin.value);
+    box.put('totalSampah', totalSampah.value);
   }
 
   @override

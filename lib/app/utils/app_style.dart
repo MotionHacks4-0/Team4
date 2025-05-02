@@ -117,4 +117,14 @@ class Style {
     color: primaryColor,
     fontWeight: FontWeight.bold,
   );
+  static TextStyle headLineStyle20 = GoogleFonts.poppins(
+    fontSize: 13,
+    color: Colors.black,
+    fontWeight: FontWeight.bold,
+  );
+  static TextStyle headLineStyle21 = GoogleFonts.poppins(
+    fontSize: 12,
+    color: primaryColor,
+    fontWeight: FontWeight.w400,
+  );
 }
