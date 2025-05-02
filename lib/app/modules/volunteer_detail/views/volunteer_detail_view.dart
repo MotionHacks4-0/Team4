@@ -69,7 +69,10 @@ class VolunteerDetailView extends StatelessWidget {
               const SizedBox(height: 8),
               Text(
                 volunteer.description,
-                style: Style.headLineStyle13,
+                style: GoogleFonts.poppins(
+                  fontSize: 12,
+                  fontWeight: FontWeight.w400,
+                ),
                 textAlign: TextAlign.justify,
               ),
             ],
