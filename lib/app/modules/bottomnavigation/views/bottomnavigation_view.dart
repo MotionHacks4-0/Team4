@@ -18,18 +18,11 @@ class BottomnavigationView extends GetView<BottomnavigationController> {
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
           backgroundColor: Colors.white,
-          selectedIconTheme: IconThemeData(color: Style.primaryColor),
-          unselectedIconTheme: IconThemeData(color: Style.blueColor),
-          selectedLabelStyle: TextStyle(
-            fontSize: 14,
-            fontWeight: FontWeight.bold,
-            color: Style.primaryColor,
-          ),
-          unselectedLabelStyle: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.normal,
-            color: Style.blueColor,
-          ),
+          currentIndex: controller.CurrentIndex.value,
+          selectedItemColor: Style.primaryColor,
+          unselectedItemColor: Style.primaryColor,
+          selectedLabelStyle: Style.headLineStyle16,
+          unselectedLabelStyle: Style.headLineStyle21,
           landscapeLayout: BottomNavigationBarLandscapeLayout.spread,
           type: BottomNavigationBarType.fixed,
           onTap: (index) => controller.SetIndex(index),
