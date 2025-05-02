@@ -1,3 +1,4 @@
+import 'package:eco_trip/app/modules/login/controllers/login_controller.dart';
 import 'package:eco_trip/app/routes/app_pages.dart';
 import 'package:eco_trip/app/utils/app_style.dart';
 import 'package:eco_trip/app/widgets/custom_button.dart';
@@ -9,7 +10,7 @@ import 'package:get/get.dart';
 import '../controllers/register_controller.dart';
 
 class RegisterView extends GetView<RegisterController> {
-  const RegisterView({super.key});
+  RegisterView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -66,13 +67,15 @@ class RegisterView extends GetView<RegisterController> {
             ),
             SizedBox(height: 16),
             Text(
-              "atau daftar dengan",
+              "Atau",
               style: Style.headLineStyle7,
             ),
             SizedBox(height: 16),
             CustomButton(
               text: "Masuk dengan Google",
-              onPress: () {},
+              onPress: () {
+                controller.loginWithGoogle();
+              },
               icon: "google.png",
               col: Style.whiteColor,
               borderColor: Style.greyColor1,

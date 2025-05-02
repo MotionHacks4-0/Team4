@@ -28,7 +28,6 @@ void main() async {
   Get.put(SetorSampahController());
   Get.put(VolunteerController());
   Get.put(HomeController());
-  Get.put(ProfileController(), permanent: true);
 
   runApp(const MyApp());
 }

@@ -46,8 +46,6 @@ class InformationView extends GetView<InformationController> {
                       ),
                     ),
                   ),
-
-                  // Overlay image (e.g., small icon or illustration)
                   Positioned(
                     top: 45,
                     left: 20,
