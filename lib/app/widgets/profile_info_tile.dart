@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:eco_trip/app/utils/app_style.dart';
+import 'package:hive/hive.dart';
 
 class ProfileInfoTile extends StatelessWidget {
   final String label;
@@ -57,12 +58,14 @@ class ProfileInfoTile extends StatelessWidget {
               copyable ? Icons.copy : Icons.chevron_right,
               size: 20,
             ),
-            onPressed: () {
+            onPressed: () async {
               if (copyable) {
                 Clipboard.setData(ClipboardData(text: value));
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(content: Text("Copied to clipboard")),
                 );
+                var box = await Hive.box('onboarding');
+                await box.put('seen', false);
               } else if (editable && onTap != null) {
                 onTap!();
               }
