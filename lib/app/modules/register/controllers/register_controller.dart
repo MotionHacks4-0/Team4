@@ -10,6 +10,19 @@ class RegisterController extends GetxController {
   final password = ''.obs;
   var isPasswordHidden = true.obs;
 
+  Future<void> loginWithGoogle() async {
+    try {
+      final user = await _authService.loginWithGoogle();
+      if (user != null) {
+        Get.offNamed(Routes.BOTTOMNAVIGATION);
+      } else {
+        Get.snackbar('Login Canceled', 'User canceled the Google sign-in.');
+      }
+    } catch (e) {
+      Get.snackbar('Login Failed', e.toString());
+    }
+  }
+
   Future<void> register() async {
     try {
       final user = await _authService.register(email.value, password.value);

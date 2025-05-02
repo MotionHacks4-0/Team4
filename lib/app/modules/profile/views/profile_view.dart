@@ -22,6 +22,7 @@ class ProfileView extends StatelessWidget {
           "Pengaturan",
           style: Style.textStyle2,
         ),
+        elevation: 0,
         centerTitle: true,
       ),
       body: SingleChildScrollView(
@@ -36,7 +37,9 @@ class ProfileView extends StatelessWidget {
             SizedBox(height: 10),
             Text(
               'Edit Foto Profil',
-              style: Style.headLineStyle11,
+              style: Style.headLineStyle9.copyWith(
+                color: Color(0xFF589A73),
+              ),
             ),
             SizedBox(height: 10),
             Row(
@@ -44,21 +47,21 @@ class ProfileView extends StatelessWidget {
               children: [
                 Text(
                   'Total Sampah',
-                  style: Style.headLineStyle12,
+                  style:
+                      Style.headLineStyle12.copyWith(color: Color(0xFF4C76A5)),
                 ),
                 Obx(
                   () => Text(
                     '${(profile.totalSampah.value / 1000).toStringAsFixed(1)} Kg',
-                    style: Style.headLineStyle12,
+                    style: Style.headLineStyle12
+                        .copyWith(color: Color(0xFF4C76A5)),
                   ),
                 ),
               ],
             ),
             Divider(height: 30),
-
-            // Editable Section
             Padding(
-              padding: const EdgeInsets.only(right: 170),
+              padding: const EdgeInsets.only(right: 190),
               child: Text(
                 "Informasi Pengguna",
                 style: Style.textStyle2,
