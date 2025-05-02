@@ -14,14 +14,14 @@ class ModalBottom4 extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Text(
-            'Poin Tidak Cukup',
+            'Oops, Poin Kamu Masih Kurang!',
             style: Style.headLineStyle12,
           ),
           SizedBox(height: 10),
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: Image.asset(
-              'assets/images/detailprdk2.png',
+              'assets/images/detailprdk4.png',
               width: 200,
               height: 200,
               fit: BoxFit.contain,
@@ -32,6 +32,23 @@ class ModalBottom4 extends StatelessWidget {
             'Untuk melakukan penukaran hadiah, kamu membutuhkan lebih banyak poin.',
             style: Style.headLineStyle17,
             textAlign: TextAlign.center,
+          ),
+          SizedBox(height: 20),
+          GestureDetector(
+            onTap: () {
+              Get.offAllNamed(Routes.BOTTOMNAVIGATION);
+            },
+            child: Container(
+              padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 7),
+              decoration: BoxDecoration(
+                color: Style.primaryColor,
+                borderRadius: BorderRadius.circular(5),
+              ),
+              child: Text(
+                'Tutup',
+                style: Style.headLineStyle10,
+              ),
+            ),
           ),
         ],
       ),
