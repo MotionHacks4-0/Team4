@@ -14,22 +14,15 @@ class SplashScreen extends StatelessWidget {
     });
 
     return Scaffold(
-      backgroundColor: Style.primaryColor,
+      backgroundColor: Colors.white,
       body: Center(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             SizedBox(
-              width: Get.width * 0.5,
-              height: Get.width * 0.5,
+              width: Get.width * 0.8,
+              height: Get.width * 0.8,
               child: Image.asset("assets/images/logo.png"),
-            ),
-            const SizedBox(
-              height: 10,
-            ),
-            Text(
-              'Ini Splash Screen',
-              style: Style.headLineStyle,
             ),
           ],
         ),

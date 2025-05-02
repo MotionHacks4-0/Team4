@@ -19,6 +19,7 @@ class VolunteerView extends GetView<VolunteerController> {
             CustomSearchBar(
               controller: controller.searchController,
               onSearch: controller.filterVolunteers,
+              hintText: "Cari aksi volunteer di sekitar",
             ),
             SizedBox(height: 30),
             Expanded(
