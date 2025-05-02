@@ -4,7 +4,9 @@ import 'package:flutter/material.dart';
 import '../../../utils/app_style.dart';
 
 class ModalBottom1 extends StatelessWidget {
-  const ModalBottom1({super.key});
+  final String image;
+  final int poin;
+  const ModalBottom1({super.key, required this.image, required this.poin});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +23,7 @@ class ModalBottom1 extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: Image.asset(
-              'assets/images/detailprdk.png',
+              image,
               width: 200,
               height: 200,
               fit: BoxFit.contain,
@@ -63,7 +65,9 @@ class ModalBottom1 extends StatelessWidget {
                           BorderRadius.vertical(top: Radius.circular(20)),
                     ),
                     builder: (BuildContext context) {
-                      return const ModalBottom2();
+                      return ModalBottom2(
+                        poin: poin,
+                      );
                     },
                   );
                 },

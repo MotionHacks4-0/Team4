@@ -10,17 +10,17 @@
 
 ## 🚀 Fitur Unggulan
 
-| Fitur | Deskripsi |
-|-------|-----------|
-| ♻️ **Setor Sampah** | Pengguna dapat menginput berat sampah (gram) yang akan diverifikasi petugas sebelum mendapatkan poin. |
-| 🧮 **Poin & Total Sampah** | Sistem poin otomatis bertambah saat setor diverifikasi, dan berkurang saat ditukar. Total gram tersimpan di profil pengguna. |
-| 🛒 **Tukar Poin** | Tukarkan poin dengan berbagai produk yang tersedia di lokasi wisata. Search bar untuk memfilter produk berdasarkan nama/lokasi. |
-| 📍 **Volunteering** | Temukan program relawan berdasarkan nama atau lokasi menggunakan pencarian dinamis. |
-| 🗺️ **Pariwisata** | Daftar tempat wisata dengan fasilitas, kontak customer service, dan info penting. |
-| 📘 **Informasi Edukatif** | Buku panduan kategori dan cara penyimpanan sampah. |
-| 👤 **Profil Dinamis** | Edit nama, ID pengguna, bio, no telepon, tanggal lahir, dan jenis kelamin. Data disimpan secara lokal menggunakan Hive. |
-| 🔐 **Login/Logout** | Menggunakan Firebase Authentication untuk keamanan pengguna. |
-| 🧠 **State Management** | Menggunakan GetX untuk pengaturan status yang efisien dan terstruktur. |
+| Fitur                      | Deskripsi                                                                                                                       |
+| -------------------------- | ------------------------------------------------------------------------------------------------------------------------------- |
+| ♻️ **Setor Sampah**        | Pengguna dapat menginput berat sampah (gram) yang akan diverifikasi petugas sebelum mendapatkan poin.                           |
+| 🧮 **Poin & Total Sampah** | Sistem poin otomatis bertambah saat setor diverifikasi, dan berkurang saat ditukar. Total gram tersimpan di profil pengguna.    |
+| 🛒 **Tukar Poin**          | Tukarkan poin dengan berbagai produk yang tersedia di lokasi wisata. Search bar untuk memfilter produk berdasarkan nama/lokasi. |
+| 📍 **Volunteering**        | Temukan program relawan berdasarkan nama atau lokasi menggunakan pencarian dinamis.                                             |
+| 🗺️ **Pariwisata**          | Daftar tempat wisata dengan fasilitas, kontak customer service, dan info penting.                                               |
+| 📘 **Informasi Edukatif**  | Buku panduan kategori dan cara penyimpanan sampah.                                                                              |
+| 👤 **Profil Dinamis**      | Edit nama, ID pengguna, bio, no telepon, tanggal lahir, dan jenis kelamin. Data disimpan secara lokal menggunakan Hive.         |
+| 🔐 **Login/Logout**        | Menggunakan Firebase Authentication untuk keamanan pengguna.                                                                    |
+| 🧠 **State Management**    | Menggunakan GetX untuk pengaturan status yang efisien dan terstruktur.                                                          |
 
 ---
 
@@ -34,16 +34,17 @@
 - **Design System** reusable (tersedia di `app_style.dart` dan `widgets/`)
 - **Responsive UI** berdasarkan desain Figma tim UI/UX
 
-
 ---
 
 ## 🧩 Design System & Reusability
 
-✅ Aplikasi dibangun dengan *design system* konsisten yang berada di:
+✅ Aplikasi dibangun dengan _design system_ konsisten yang berada di:
+
 - `lib/app/utils/app_style.dart`: Warna, tipografi, dan komponen visual global
 - `lib/app/widgets`: Komponen UI seperti `custom_button`, `custom_search_bar`, `custom_textform`, dll.
 
 🎯 Semua komponen bersifat **reusable** dan digunakan lintas modul:
+
 - Search bar digunakan di fitur Volunteer & Tukar Poin
 - Komponen `custom_button` dan `custom_textform` digunakan di berbagai halaman form
 
@@ -75,14 +76,14 @@ lib/
 
 ## 🧪 Validasi Penilaian
 
-| Kriteria | Keterangan |
-|----------|------------|
-| ✅ Implementasi Model | `pariwisata_model.dart`, `volunteer_model.dart`, dan list class model lainnya|
-| ✅ UI/UX dari Figma | Telah diterapkan sesuai desain dan sistem |
-| ✅ Firebase / Local Storage | Firebase (Auth), Hive (Data Profil) |
-| ✅ State Management | GetX untuk semua fitur |
-| ✅ Konsistensi Komponen | Custom Widgets digunakan lintas fitur |
-| ✅ Anti-Plagiarisme | Semua kode dikembangkan mandiri dan modular |
+| Kriteria                    | Keterangan                                                                    |
+| --------------------------- | ----------------------------------------------------------------------------- |
+| ✅ Implementasi Model       | `pariwisata_model.dart`, `volunteer_model.dart`, dan list class model lainnya |
+| ✅ UI/UX dari Figma         | Telah diterapkan sesuai desain dan sistem                                     |
+| ✅ Firebase / Local Storage | Firebase (Auth), Hive (Data Profil)                                           |
+| ✅ State Management         | GetX untuk semua fitur                                                        |
+| ✅ Konsistensi Komponen     | Custom Widgets digunakan lintas fitur                                         |
+| ✅ Anti-Plagiarisme         | Semua kode dikembangkan mandiri dan modular                                   |
 
 ---
 

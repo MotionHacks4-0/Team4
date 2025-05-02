@@ -20,7 +20,7 @@ class ModalBotttom3 extends StatelessWidget {
           ClipRRect(
             borderRadius: BorderRadius.circular(12),
             child: Image.asset(
-              'assets/images/detailprdk3.png', 
+              'assets/images/detailprdk3.png',
               width: 200,
               height: 200,
               fit: BoxFit.contain,

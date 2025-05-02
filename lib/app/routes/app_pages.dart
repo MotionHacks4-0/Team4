@@ -89,7 +89,15 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.DETAIL_BARANG,
-      page: () => const DetailBarangView(),
+      page: () {
+        final args = Get.arguments as Map<String, dynamic>;
+        return DetailBarangView(
+          args['image'],
+          args['name'],
+          args['poin'],
+          args['location'],
+        );
+      },
       binding: DetailBarangBinding(),
     ),
     GetPage(
