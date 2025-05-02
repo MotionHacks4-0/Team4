@@ -1,16 +1,89 @@
-# eco_trip
+<p align="center">
+  <img src="assets/images/logo.png" alt="EcoTrip Logo" width="300"/>
+</p>
 
-A new Flutter project.
+# ♻️ EcoTrip - Cleaner Tourism Starts With You
 
-## Getting Started
+**EcoTrip** adalah aplikasi berbasis Flutter yang menggabungkan aktivitas pelestarian lingkungan dengan pengalaman wisata. Pengguna dapat menyetorkan sampah, mendapatkan poin, dan menukarkannya dengan produk menarik. Aplikasi ini juga menyediakan fitur volunteering, informasi pariwisata, edukasi lingkungan, serta profil pengguna yang terintegrasi.
 
-This project is a starting point for a Flutter application.
+---
 
-A few resources to get you started if this is your first Flutter project:
+## 🚀 Fitur Unggulan
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+| Fitur | Deskripsi |
+|-------|-----------|
+| ♻️ **Setor Sampah** | Pengguna dapat menginput berat sampah (gram) yang akan diverifikasi petugas sebelum mendapatkan poin. |
+| 🧮 **Poin & Total Sampah** | Sistem poin otomatis bertambah saat setor diverifikasi, dan berkurang saat ditukar. Total gram tersimpan di profil pengguna. |
+| 🛒 **Tukar Poin** | Tukarkan poin dengan berbagai produk yang tersedia di lokasi wisata. Search bar untuk memfilter produk berdasarkan nama/lokasi. |
+| 📍 **Volunteering** | Temukan program relawan berdasarkan nama atau lokasi menggunakan pencarian dinamis. |
+| 🗺️ **Pariwisata** | Daftar tempat wisata dengan fasilitas, kontak customer service, dan info penting. |
+| 📘 **Informasi Edukatif** | Buku panduan kategori dan cara penyimpanan sampah. |
+| 👤 **Profil Dinamis** | Edit nama, ID pengguna, bio, no telepon, tanggal lahir, dan jenis kelamin. Data disimpan secara lokal menggunakan Hive. |
+| 🔐 **Login/Logout** | Menggunakan Firebase Authentication untuk keamanan pengguna. |
+| 🧠 **State Management** | Menggunakan GetX untuk pengaturan status yang efisien dan terstruktur. |
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+---
+
+## 🛠️ Tech Stack
+
+- **Flutter**: UI Framework
+- **Firebase Authentication** untuk login/logout
+- **Hive**: Penyimpanan lokal (data profil & histori pengguna)
+- **GetX**: State management, routing, dan dependency injection
+- **Get CLI**: Struktur folder modular berbasis model-view-controller (MVC)
+- **Design System** reusable (tersedia di `app_style.dart` dan `widgets/`)
+- **Responsive UI** berdasarkan desain Figma tim UI/UX
+
+
+---
+
+## 🧩 Design System & Reusability
+
+✅ Aplikasi dibangun dengan *design system* konsisten yang berada di:
+- `lib/app/utils/app_style.dart`: Warna, tipografi, dan komponen visual global
+- `lib/app/widgets`: Komponen UI seperti `custom_button`, `custom_search_bar`, `custom_textform`, dll.
+
+🎯 Semua komponen bersifat **reusable** dan digunakan lintas modul:
+- Search bar digunakan di fitur Volunteer & Tukar Poin
+- Komponen `custom_button` dan `custom_textform` digunakan di berbagai halaman form
+
+---
+
+## 📂 Struktur Proyek (Get CLI)
+
+```
+lib/
+├── app/
+│   ├── data/                # Model (mis. volunteer_model, pariwisata_model)
+│   ├── modules/             # Fitur modular (home, setor_sampah, volunteer, dst)
+│   ├── routes/              # Routing: app_pages.dart, app_routes.dart
+│   ├── services/            # Auth service, controller logika bisnis
+│   ├── utils/               # Style dan theme global
+│   ├── widgets/             # Reusable UI components
+├── main.dart                # Inisialisasi Firebase, Hive, dan controller global
+```
+
+---
+
+## 📦 Integrasi & Logika
+
+- **State Terkoneksi Antar Halaman**: Poin dan total gram terhubung antara halaman Home, Setor Sampah, dan Profile dengan penggunaan controller `HomeController`, `SetorSampahController`, dan `ProfileController`.
+- **Edit Profil Real-time**: Perubahan data langsung tercermin di homepage.
+- **Sistem Verifikasi Setor**: Setelah input, pengguna mendapat notifikasi “Menunggu Verifikasi” sebelum poin masuk.
+
+---
+
+## 🧪 Validasi Penilaian
+
+| Kriteria | Keterangan |
+|----------|------------|
+| ✅ Implementasi Model | `pariwisata_model.dart`, `volunteer_model.dart`, dan list class model lainnya|
+| ✅ UI/UX dari Figma | Telah diterapkan sesuai desain dan sistem |
+| ✅ Firebase / Local Storage | Firebase (Auth), Hive (Data Profil) |
+| ✅ State Management | GetX untuk semua fitur |
+| ✅ Konsistensi Komponen | Custom Widgets digunakan lintas fitur |
+| ✅ Anti-Plagiarisme | Semua kode dikembangkan mandiri dan modular |
+
+---
+
+> EcoTrip membantu pengguna berkontribusi menjaga lingkungan sambil menikmati perjalanan yang bertanggung jawab. 🌱
