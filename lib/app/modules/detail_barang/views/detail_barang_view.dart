@@ -8,7 +8,13 @@ import '../controllers/detail_barang_controller.dart';
 import '../widgets/modal_bottom1.dart';
 
 class DetailBarangView extends GetView<DetailBarangController> {
-  const DetailBarangView({super.key});
+  final String image;
+  final String name;
+  final int poin;
+  final String location;
+
+  DetailBarangView(this.image, this.name, this.poin, this.location,
+      {super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -30,7 +36,7 @@ class DetailBarangView extends GetView<DetailBarangController> {
               child: Column(
                 children: [
                   Center(
-                    child: Image.asset('assets/images/detailprdk.png'),
+                    child: Image.asset(image),
                   ),
                   SizedBox(
                     height: 15,
@@ -38,7 +44,7 @@ class DetailBarangView extends GetView<DetailBarangController> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      'Ancol Bantal Plushie',
+                      name,
                       style: Style.headLineStyle18,
                     ),
                   ),
@@ -48,7 +54,7 @@ class DetailBarangView extends GetView<DetailBarangController> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      '550 poin',
+                      '${poin} poin',
                       style: Style.headLineStyle19,
                     ),
                   ),
@@ -60,7 +66,7 @@ class DetailBarangView extends GetView<DetailBarangController> {
                       Icon(Icons.location_on_outlined,
                           size: 16, color: Style.greyColor2),
                       const SizedBox(width: 4),
-                      Text('Ancol', style: Style.headLineStyle7),
+                      Text(location, style: Style.headLineStyle7),
                       const Spacer(),
                       Container(
                           padding:
@@ -94,7 +100,10 @@ class DetailBarangView extends GetView<DetailBarangController> {
                         BorderRadius.vertical(top: Radius.circular(20)),
                   ),
                   builder: (BuildContext context) {
-                    return ModalBottom1();
+                    return ModalBottom1(
+                      image: image,
+                      poin: poin,
+                    );
                   },
                 );
               },

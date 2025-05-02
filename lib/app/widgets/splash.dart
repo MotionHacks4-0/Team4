@@ -1,16 +1,23 @@
 import 'package:eco_trip/app/utils/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:hive/hive.dart';
 
 import '../routes/app_pages.dart';
 
 class SplashScreen extends StatelessWidget {
-  const SplashScreen({super.key});
+  final bool hasSeenOnboarding;
+  const SplashScreen({super.key, required this.hasSeenOnboarding});
 
   @override
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 3), () {
-      Get.offAllNamed(Routes.ONBOARDING);
+      if (hasSeenOnboarding) {
+        Get.offAllNamed(Routes.LOGIN);
+      } else {
+        Hive.box('onboarding').put('seen', true);
+        Get.offAllNamed(Routes.ONBOARDING);
+      }
     });
 
     return Scaffold(

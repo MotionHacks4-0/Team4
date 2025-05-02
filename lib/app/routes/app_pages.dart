@@ -46,10 +46,6 @@ class AppPages {
       binding: HomeBinding(),
     ),
     GetPage(
-      name: Routes.splash,
-      page: () => const SplashScreen(),
-    ),
-    GetPage(
       name: _Paths.ONBOARDING,
       page: () => const OnboardingView(),
       binding: OnboardingBinding(),
@@ -76,7 +72,7 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.REGISTER,
-      page: () => const RegisterView(),
+      page: () => RegisterView(),
       binding: RegisterBinding(),
     ),
     GetPage(
@@ -93,7 +89,15 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.DETAIL_BARANG,
-      page: () => const DetailBarangView(),
+      page: () {
+        final args = Get.arguments as Map<String, dynamic>;
+        return DetailBarangView(
+          args['image'],
+          args['name'],
+          args['poin'],
+          args['location'],
+        );
+      },
       binding: DetailBarangBinding(),
     ),
     GetPage(
