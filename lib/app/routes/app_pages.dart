@@ -46,10 +46,6 @@ class AppPages {
       binding: HomeBinding(),
     ),
     GetPage(
-      name: Routes.splash,
-      page: () => const SplashScreen(),
-    ),
-    GetPage(
       name: _Paths.ONBOARDING,
       page: () => const OnboardingView(),
       binding: OnboardingBinding(),

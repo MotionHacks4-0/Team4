@@ -21,6 +21,7 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
+  var onboardingBox = await Hive.openBox('onboarding');
   final user = FirebaseAuth.instance.currentUser;
   if (user != null) {
     await Hive.openBox(user.uid);
@@ -29,11 +30,14 @@ void main() async {
   Get.put(VolunteerController());
   Get.put(HomeController());
 
-  runApp(const MyApp());
+  runApp(MyApp(
+    hasSeenOnboarding: onboardingBox.get('seen', defaultValue: false),
+  ));
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final bool hasSeenOnboarding;
+  const MyApp({super.key, required this.hasSeenOnboarding});
 
   @override
   Widget build(BuildContext context) {
@@ -41,7 +45,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: "Application",
       getPages: AppPages.routes,
-      home: const SplashScreen(),
+      home: SplashScreen(hasSeenOnboarding: hasSeenOnboarding),
     );
   }
 }
