@@ -76,14 +76,15 @@ lib/
 
 ## 🧪 Validasi Penilaian
 
-| Kriteria                    | Keterangan                                                                    |
-| --------------------------- | ----------------------------------------------------------------------------- |
-| ✅ Implementasi Model       | `pariwisata_model.dart`, `volunteer_model.dart`, dan list class model lainnya |
-| ✅ UI/UX dari Figma         | Telah diterapkan sesuai desain dan sistem                                     |
-| ✅ Firebase / Local Storage | Firebase (Auth), Hive (Data Profil)                                           |
-| ✅ State Management         | GetX untuk semua fitur                                                        |
-| ✅ Konsistensi Komponen     | Custom Widgets digunakan lintas fitur                                         |
-| ✅ Anti-Plagiarisme         | Semua kode dikembangkan mandiri dan modular                                   |
+| Kriteria                    | Keterangan                                                                                                                                                                                                                     |
+|----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ✅ Implementasi Model       | - `models/` → Berisi definisi model seperti `pariwisata_model.dart`, `volunteer_model.dart`, dan class model lainnya untuk merepresentasikan data nyata dalam bentuk objek. <br> - `controllers/` → Mengelola logika dan manipulasi data model, serta menjadi jembatan antara view dan model. <br> - `views/` → Menampilkan dan memungkinkan interaksi pengguna terhadap data model secara dinamis melalui UI. <br> - Hive → Menyimpan dan mengambil data model secara lokal dalam bentuk JSON, seperti data profil pengguna dan total sampah. |
+| ✅ UI/UX dari Figma         | Telah diterapkan sesuai desain sistem yang terdapat pada file `utils/app_style.dart`, memastikan kesesuaian dengan desain yang dirancang tim UI/UX.                                                                           |
+| ✅ Firebase / Local Storage | Menggunakan **Firebase Authentication** untuk login/logout, dan **Hive** untuk penyimpanan data profil pengguna secara lokal.                                                                                                 |
+| ✅ State Management         | Menggunakan **GetX** untuk seluruh fitur, memastikan pengelolaan state yang efisien dan terstruktur dengan pendekatan Get CLI.                                                                                                |
+| ✅ Konsistensi Komponen     | Menggunakan **Custom Widgets** secara konsisten dan reusable lintas fitur yang ditempatkan di folder `widgets/`, seperti form input, button, tile, dan search bar.                                                            |
+| ✅ Anti-Plagiarisme         | Seluruh kode dikembangkan secara **mandiri dan modular**, tanpa menyalin dari proyek luar, dengan mengikuti prinsip clean code dan arsitektur yang baik.                                                                      |
+
 
 ---
 
