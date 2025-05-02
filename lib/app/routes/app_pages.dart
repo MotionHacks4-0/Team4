@@ -81,7 +81,9 @@ class AppPages {
     ),
     GetPage(
       name: _Paths.DETAIL_WISATA_DART,
-      page: () => const DetailWisataDartView(),
+      page: () => DetailWisataDartView(
+        pariwisata: null,
+      ),
       binding: DetailWisataDartBinding(),
     ),
     GetPage(

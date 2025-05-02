@@ -6,6 +6,7 @@ import 'package:get/get.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 import '../../../routes/app_pages.dart';
+import '../../../widgets/custom_button.dart';
 import '../controllers/onboarding_controller.dart';
 
 class OnboardingView extends GetView<OnboardingController> {
@@ -21,12 +22,6 @@ class OnboardingView extends GetView<OnboardingController> {
             onPageChanged: (value) {
               controller.page.value = value;
               print(controller.page.value);
-
-              if (controller.page.value == 2) {
-                Future.delayed(const Duration(seconds: 2), () {
-                  Get.offAllNamed(Routes.LOGIN);
-                });
-              }
             },
             children: [
               //start page
@@ -38,15 +33,15 @@ class OnboardingView extends GetView<OnboardingController> {
               ),
               OnBoardingView(
                 image: 'onboard2.png',
-                title: 'Jelajah Seru, Bumi Lebih Asri',
+                title: 'Bantu Temukan Lokasi Sampah',
                 subtitle:
-                    'Liburan tetap seru, tapi punya dampak positif\nbagi lingkungan',
+                    'Buang sampah dengan mudah saat liburan, tanpa\nbingung cari tempatnya',
               ),
               OnBoardingView(
                 image: 'onboard3.png',
-                title: 'Jelajah Seru, Bumi Lebih Asri',
+                title: 'Tukar Sampah, Dapatkan Poin\nMenarik!',
                 subtitle:
-                    'Liburan tetap seru, tapi punya dampak positif\nbagi lingkungan',
+                    'Kumpulkan dan setor sampahmu, lalu tukar\npoinnya dengan hadiah',
               ),
             ],
           ),
@@ -58,58 +53,64 @@ class OnboardingView extends GetView<OnboardingController> {
                 left: 24.0,
                 right: 24.0,
               ),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  // Skip button
-                  GestureDetector(
-                    onTap: () {
-                      controller.indicator.jumpToPage(3);
-                    },
-                    child: Text(
-                      "Skip",
-                      style: Style.headLineStyle5,
-                    ),
-                  ),
-
-                  // SmoothPageIndicator
-                  Obx(
-                    () => Container(
-                      child: controller.page.value != 3
-                          ? SmoothPageIndicator(
-                              controller: controller.indicator,
-                              count: 3,
-                              effect: SlideEffect(
-                                activeDotColor: Style.primaryColor,
-                                spacing: 14.0,
-                                radius: 8.0,
-                                dotWidth: 16,
-                                dotHeight: 16,
-                                dotColor: Style.primaryColor30,
-                              ),
-                            )
-                          : Container(),
-                    ),
-                  ),
-
-                  // Arrow button
-                  Container(
-                    decoration: BoxDecoration(
-                      color: Style.primaryColor,
-                      shape: BoxShape.circle,
-                    ),
-                    child: IconButton(
-                      icon: const Icon(Icons.arrow_forward_ios_rounded,
-                          color: Colors.white),
-                      onPressed: () {
-                        controller.indicator.nextPage(
-                          duration: Duration(milliseconds: 300),
-                          curve: Curves.easeInOut,
-                        );
-                      },
-                    ),
-                  ),
-                ],
+              child: Obx(
+                () => controller.page.value != 2
+                    ? Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          GestureDetector(
+                            onTap: () {
+                              controller.indicator.jumpToPage(2);
+                            },
+                            child: Text(
+                              "Skip",
+                              style: Style.headLineStyle5,
+                            ),
+                          ),
+                          SmoothPageIndicator(
+                            controller: controller.indicator,
+                            count: 3,
+                            effect: SlideEffect(
+                              activeDotColor: Style.primaryColor,
+                              spacing: 14.0,
+                              radius: 8.0,
+                              dotWidth: 16,
+                              dotHeight: 16,
+                              dotColor: Style.primaryColor30,
+                            ),
+                          ),
+                          Container(
+                            decoration: BoxDecoration(
+                              color: Style.primaryColor,
+                              shape: BoxShape.circle,
+                            ),
+                            child: IconButton(
+                              icon: const Icon(Icons.arrow_forward_ios_rounded,
+                                  color: Colors.white),
+                              onPressed: () {
+                                controller.indicator.nextPage(
+                                  duration: Duration(milliseconds: 300),
+                                  curve: Curves.easeInOut,
+                                );
+                              },
+                            ),
+                          ),
+                        ],
+                      )
+                    : GestureDetector(
+                        onTap: () {
+                          Get.offAllNamed(Routes.LOGIN);
+                        },
+                        child: CustomButton(
+                          text: "Mulai",
+                          onPress: () {
+                            Get.offAllNamed(Routes.LOGIN);
+                          },
+                          textStyle: Style.headLineStyle6,
+                          col: Style.primaryColor,
+                          borderColor: Style.primaryColor,
+                        ),
+                      ),
               ),
             ),
           ),
