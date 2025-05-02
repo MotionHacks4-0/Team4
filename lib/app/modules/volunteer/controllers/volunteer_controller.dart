@@ -18,7 +18,7 @@ class VolunteerController extends GetxController {
         location: 'Pantai Ancol, Jakarta',
         countDown: '10 Hari lagi',
         description:
-            'Mari bergabung dalam aksi nyata untuk menyelamatkan laut kita! Aksi Bersih Pantai Bersama SOS (Save Our Sea) adalah kegiatan volunteering yang bertujuan untuk membersihkan area pesisir dari sampah plastik dan limbah anorganik, serta meningkatkan kesadaran masyarakat tentang pentingnya menjaga kebersihan laut.Melalui kegiatan ini, para relawan akan: \n1.Mengumpulkan dan memilah sampah di sepanjang garis pantai. \n2.Mencatat jenis dan jumlah sampah sebagai bagian dari data monitoring lingkungan. \n3.Mengikuti sesi edukasi singkat tentang dampak polusi laut dan cara hidup berkelanjutan. \n4.Berjejaring dengan komunitas pecinta lingkungan dan warga setempat ',
+            'Mari bergabung dalam aksi nyata untuk menyelamatkan laut kita! Aksi Bersih Pantai Bersama SOS (Save Our Sea) adalah kegiatan volunteering yang bertujuan untuk membersihkan area pesisir dari sampah plastik dan limbah anorganik, serta meningkatkan kesadaran masyarakat tentang pentingnya menjaga kebersihan laut.Melalui kegiatan ini, para relawan akan:\n\n 1.Mengumpulkan dan memilah sampah di sepanjang garis pantai. \n2.Mencatat jenis dan jumlah sampah sebagai bagian dari data monitoring lingkungan. \n3.Mengikuti sesi edukasi singkat tentang dampak polusi laut dan cara hidup berkelanjutan. \n4.Berjejaring dengan komunitas pecinta lingkungan dan warga setempat \n\nLink: https://www.instagram.com/p/DDwLnWNSupR/',
         picture: 'volunteer_1.jpg',
       ),
       VolunteerModel(
@@ -27,7 +27,7 @@ class VolunteerController extends GetxController {
         location: 'Pantai Ancol, Jakarta',
         countDown: '7 Hari lagi',
         description:
-            'Mari bergabung dalam aksi nyata untuk menyelamatkan laut kita! Aksi Bersih Pantai Bersama SOS (Save Our Sea) adalah kegiatan volunteering yang bertujuan untuk membersihkan area pesisir dari sampah plastik dan limbah anorganik, serta meningkatkan kesadaran masyarakat tentang pentingnya menjaga kebersihan laut.Melalui kegiatan ini, para relawan akan: \n1.Mengumpulkan dan memilah sampah di sepanjang garis pantai. \n2.Mencatat jenis dan jumlah sampah sebagai bagian dari data monitoring lingkungan. \n3.Mengikuti sesi edukasi singkat tentang dampak polusi laut dan cara hidup berkelanjutan. \n4.Berjejaring dengan komunitas pecinta lingkungan dan warga setempat ',
+            'Mari bergabung dalam aksi nyata untuk menyelamatkan laut kita! Aksi Bersih Pantai Bersama SOS (Save Our Sea) adalah kegiatan volunteering yang bertujuan untuk membersihkan area pesisir dari sampah plastik dan limbah anorganik, serta meningkatkan kesadaran masyarakat tentang pentingnya menjaga kebersihan laut.Melalui kegiatan ini, para relawan akan:\n\n 1.Mengumpulkan dan memilah sampah di sepanjang garis pantai. \n2.Mencatat jenis dan jumlah sampah sebagai bagian dari data monitoring lingkungan. \n3.Mengikuti sesi edukasi singkat tentang dampak polusi laut dan cara hidup berkelanjutan. \n4.Berjejaring dengan komunitas pecinta lingkungan dan warga setempat \n\nhttps://www.instagram.com/p/DDwLnWNSupR/',
         picture: 'volunteer_1.jpg',
       ),
       VolunteerModel(
@@ -36,7 +36,7 @@ class VolunteerController extends GetxController {
         location: 'Pantai Benoa, Bali',
         countDown: '13 Hari lagi',
         description:
-            'Mari bergabung dalam aksi nyata untuk menyelamatkan laut kita! Aksi Bersih Pantai Bersama SOS (Save Our Sea) adalah kegiatan volunteering yang bertujuan untuk membersihkan area pesisir dari sampah plastik dan limbah anorganik, serta meningkatkan kesadaran masyarakat tentang pentingnya menjaga kebersihan laut.Melalui kegiatan ini, para relawan akan: \n1.Mengumpulkan dan memilah sampah di sepanjang garis pantai. \n2.Mencatat jenis dan jumlah sampah sebagai bagian dari data monitoring lingkungan. \n3.Mengikuti sesi edukasi singkat tentang dampak polusi laut dan cara hidup berkelanjutan. \n4.Berjejaring dengan komunitas pecinta lingkungan dan warga setempat ',
+            'Mari bergabung dalam aksi nyata untuk menyelamatkan laut kita! Aksi Bersih Pantai Bersama SOS (Save Our Sea) adalah kegiatan volunteering yang bertujuan untuk membersihkan area pesisir dari sampah plastik dan limbah anorganik, serta meningkatkan kesadaran masyarakat tentang pentingnya menjaga kebersihan laut.Melalui kegiatan ini, para relawan akan:\n\n 1.Mengumpulkan dan memilah sampah di sepanjang garis pantai. \n2.Mencatat jenis dan jumlah sampah sebagai bagian dari data monitoring lingkungan. \n3.Mengikuti sesi edukasi singkat tentang dampak polusi laut dan cara hidup berkelanjutan. \n4.Berjejaring dengan komunitas pecinta lingkungan dan warga setempat \n\nhttps://www.instagram.com/p/DDwLnWNSupR/',
         picture: 'volunteer_1.jpg',
       ),
     ]);

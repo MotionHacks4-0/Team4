@@ -8,8 +8,10 @@ import '../../profile/controllers/profile_controller.dart';
 import 'modal_botttom3.dart';
 
 class ModalBottom2 extends StatelessWidget {
+  final int poin;
   const ModalBottom2({
     super.key,
+    required this.poin,
   });
 
   @override
@@ -91,7 +93,7 @@ class ModalBottom2 extends StatelessWidget {
               GestureDetector(
                 onTap: () {
                   final profile = Get.find<ProfileController>();
-                  int requiredPoin = 550;
+                  int requiredPoin = poin;
 
                   if (profile.totalPoin.value >= requiredPoin) {
                     profile.kurangiPoin(requiredPoin);
