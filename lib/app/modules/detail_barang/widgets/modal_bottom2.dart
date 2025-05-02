@@ -112,7 +112,8 @@ class ModalBottom2 extends StatelessWidget {
                               BorderRadius.vertical(top: Radius.circular(20)),
                         ),
                         builder: (BuildContext context) {
-                          Future.delayed(const Duration(seconds: 1), () {
+                          Future.delayed(const Duration(milliseconds: 1500),
+                              () {
                             Get.offAllNamed(Routes.BOTTOMNAVIGATION);
                           });
 
@@ -136,9 +137,6 @@ class ModalBottom2 extends StatelessWidget {
                                 borderRadius: BorderRadius.vertical(
                                     top: Radius.circular(20))),
                             builder: (BuildContext contex) {
-                              Future.delayed(const Duration(seconds: 1), () {
-                                Get.offAllNamed(Routes.BOTTOMNAVIGATION);
-                              });
                               return const ModalBottom4();
                             });
                       },
