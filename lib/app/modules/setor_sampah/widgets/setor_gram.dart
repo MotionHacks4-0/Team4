@@ -1,11 +1,7 @@
-import 'package:eco_trip/app/modules/home/views/home_view.dart';
-import 'package:eco_trip/app/modules/profile/controllers/profile_controller.dart';
 import 'package:eco_trip/app/modules/setor_sampah/widgets/load.dart';
 import 'package:eco_trip/app/utils/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import '../../../routes/app_pages.dart';
-
 import '../../../widgets/custom_button.dart';
 import '../controllers/setor_sampah_controller.dart';
 import 'success.dart';
@@ -226,8 +222,9 @@ class _SetorGramState extends State<SetorGram> {
               Load.show(context); 
               await Future.delayed(
                   const Duration(milliseconds: 1500)); 
-              if (context.mounted)
-                Navigator.of(context).pop(); 
+              if (context.mounted) {
+                Navigator.of(context).pop();
+              } 
               controller.setorSampah(weight); 
               Success.show(context, poin); 
             },

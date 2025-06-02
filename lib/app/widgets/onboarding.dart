@@ -8,7 +8,7 @@ class OnBoardingView extends StatelessWidget {
   final String? title;
   final String? subtitle;
 
-  const OnBoardingView({this.image, this.title, this.subtitle});
+  const OnBoardingView({super.key, this.image, this.title, this.subtitle});
 
   @override
   Widget build(BuildContext context) {
@@ -18,7 +18,7 @@ class OnBoardingView extends StatelessWidget {
           padding: EdgeInsets.only(top: 70),
           height: Get.height * 0.65,
           child: Image.asset(
-            'assets/images/${image}',
+            'assets/images/$image',
             scale: 1.75,
             fit: BoxFit
                 .contain, // bisa juga coba BoxFit.cover tergantung kebutuhan
@@ -32,7 +32,7 @@ class OnBoardingView extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
-                '${title}',
+                '$title',
                 style: Style.headLineStyle2,
                 textAlign: TextAlign.center,
               ),
@@ -40,7 +40,7 @@ class OnBoardingView extends StatelessWidget {
                 height: 20,
               ),
               Text(
-                '${subtitle}',
+                '$subtitle',
                 style: Style.headLineStyle5,
                 textAlign: TextAlign.center,
               )

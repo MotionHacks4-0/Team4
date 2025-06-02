@@ -85,7 +85,8 @@ lib/
 | ✅ Konsistensi Komponen     | Menggunakan **Custom Widgets** secara konsisten dan reusable lintas fitur yang ditempatkan di folder `widgets/`, seperti form input, button, tile, dan search bar.                                                            |
 | ✅ Anti-Plagiarisme         | Seluruh kode dikembangkan secara **mandiri dan modular**, tanpa menyalin dari proyek luar, dengan mengikuti prinsip clean code dan arsitektur yang baik.                                                                      |
 
-
+## 📸 Preview Aplikasi
+![Showcase](assets/images/showcase.png)
 ---
 
 > EcoTrip membantu pengguna berkontribusi menjaga lingkungan sambil menikmati perjalanan yang bertanggung jawab. 🌱

@@ -12,20 +12,20 @@ class BottomnavigationView extends GetView<BottomnavigationController> {
     return Scaffold(
       body: Obx(
         () => SafeArea(
-          child: controller.screens[controller.CurrentIndex.value],
+          child: controller.screens[controller.currentIndex.value],
         ),
       ),
       bottomNavigationBar: Obx(
         () => BottomNavigationBar(
           backgroundColor: Colors.white,
-          currentIndex: controller.CurrentIndex.value,
+          currentIndex: controller.currentIndex.value,
           selectedItemColor: Style.primaryColor,
           unselectedItemColor: Style.primaryColor,
           selectedLabelStyle: Style.headLineStyle16,
           unselectedLabelStyle: Style.headLineStyle21,
           landscapeLayout: BottomNavigationBarLandscapeLayout.spread,
           type: BottomNavigationBarType.fixed,
-          onTap: (index) => controller.SetIndex(index),
+          onTap: (index) => controller.setIndex(index),
           items: [
             BottomNavigationBarItem(
                 icon: Container(
@@ -33,7 +33,7 @@ class BottomnavigationView extends GetView<BottomnavigationController> {
                   width: 30,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(controller.CurrentIndex.value == 0
+                      image: AssetImage(controller.currentIndex.value == 0
                           ? 'assets/icons/home.png'
                           : 'assets/icons/unhome.png'),
                     ),
@@ -46,7 +46,7 @@ class BottomnavigationView extends GetView<BottomnavigationController> {
                   width: 30,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(controller.CurrentIndex.value == 1
+                      image: AssetImage(controller.currentIndex.value == 1
                           ? 'assets/icons/volunteer.png'
                           : 'assets/icons/unvolunteer.png'),
                     ),
@@ -59,7 +59,7 @@ class BottomnavigationView extends GetView<BottomnavigationController> {
                   width: 30,
                   decoration: BoxDecoration(
                     image: DecorationImage(
-                      image: AssetImage(controller.CurrentIndex.value == 2
+                      image: AssetImage(controller.currentIndex.value == 2
                           ? 'assets/icons/setting.png'
                           : 'assets/icons/unsetting.png'),
                     ),

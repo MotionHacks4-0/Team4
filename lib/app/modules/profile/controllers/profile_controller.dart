@@ -62,7 +62,7 @@ class ProfileController extends GetxController {
     if (user != null) {
       displayName.value = user.displayName ?? 'No Name';
       email.value = user.email ?? '';
-      phoneNumber.value = user.phoneNumber ?? this.phoneNumber.value;
+      phoneNumber.value = user.phoneNumber ?? phoneNumber.value;
       uid.value = user.uid;
       photoURL.value = user.photoURL ?? '';
     }

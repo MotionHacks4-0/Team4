@@ -14,7 +14,7 @@ class RegisterController extends GetxController {
     try {
       final user = await _authService.loginWithGoogle();
       if (user != null) {
-        Get.offNamed(Routes.BOTTOMNAVIGATION);
+        Get.offNamed(Routes.bottomNavigation);
       } else {
         Get.snackbar('Login Canceled', 'User canceled the Google sign-in.');
       }
@@ -27,7 +27,7 @@ class RegisterController extends GetxController {
     try {
       final user = await _authService.register(email.value, password.value);
       if (user != null) {
-        Get.offNamed(Routes.LOGIN);
+        Get.offNamed(Routes.login);
       }
     } catch (e) {
       Get.snackbar('Registration Failed', e.toString());

@@ -92,7 +92,7 @@ class CustomVolunteerTiles extends StatelessWidget {
                 ),
                 onTap: () {
                   Get.toNamed(
-                    Routes.VOLUNTEER_DETAIL,
+                    Routes.volunteerDetail,
                     arguments: volunteerModel,
                   );
                 },

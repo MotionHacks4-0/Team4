@@ -16,8 +16,7 @@ class HomeView extends GetView<HomeController> {
   HomeView({super.key});
   @override
   Widget build(BuildContext context) {
-    final SetorSampahController setorController =
-        Get.find<SetorSampahController>();
+    Get.find<SetorSampahController>();
 
     return Scaffold(
       backgroundColor: Colors.white,
@@ -110,7 +109,7 @@ class HomeView extends GetView<HomeController> {
                             ),
                             GestureDetector(
                               onTap: () {
-                                Get.toNamed(Routes.SETOR_SAMPAH);
+                                Get.toNamed(Routes.setorSampah);
                               },
                               child: Column(
                                 children: [
@@ -141,7 +140,7 @@ class HomeView extends GetView<HomeController> {
                             SizedBox(width: 40),
                             GestureDetector(
                               onTap: () {
-                                Get.toNamed(Routes.ALL_EXCHANGE_POIN);
+                                Get.toNamed(Routes.allExchangePoin);
                               },
                               child: Column(
                                 children: [
@@ -228,7 +227,7 @@ class HomeView extends GetView<HomeController> {
                     ),
                     GestureDetector(
                       onTap: () {
-                        Get.toNamed(Routes.ALL_EXCHANGE_POIN);
+                        Get.toNamed(Routes.allExchangePoin);
                       },
                       child: Text(
                         'Lihat Semua',
@@ -239,6 +238,7 @@ class HomeView extends GetView<HomeController> {
                 ),
               ),
               PoinList(),
+              SizedBox(height: 24,),
             ],
           ),
         ],

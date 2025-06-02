@@ -20,7 +20,7 @@ class AllExchangePoinController extends GetxController {
         poin: 500,
         lokasi: 'Ancol',
         onTap: () {
-          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+          Get.toNamed(Routes.detailBarang, arguments: {
             'image': 'assets/images/product1.png',
             'name': 'Ancol Bantal Cushion',
             'poin': 500,
@@ -34,7 +34,7 @@ class AllExchangePoinController extends GetxController {
         poin: 1500,
         lokasi: 'Batu Karas',
         onTap: () {
-          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+          Get.toNamed(Routes.detailBarang, arguments: {
             'image': 'assets/images/product2.png',
             'name': 'Voucher Bobocabin...',
             'poin': 1500,
@@ -48,7 +48,7 @@ class AllExchangePoinController extends GetxController {
         poin: 100,
         lokasi: 'Pengandaran',
         onTap: () {
-          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+          Get.toNamed(Routes.detailBarang, arguments: {
             'image': 'assets/images/product3.png',
             'name': 'Tas Eco-Friendly',
             'poin': 100,
@@ -62,7 +62,7 @@ class AllExchangePoinController extends GetxController {
         poin: 550,
         lokasi: 'Ancol',
         onTap: () {
-          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+          Get.toNamed(Routes.detailBarang, arguments: {
             'image': 'assets/images/product4.png',
             'name': 'Ancol Bantal Plushie',
             'poin': 550,
@@ -76,7 +76,7 @@ class AllExchangePoinController extends GetxController {
         poin: 10,
         lokasi: 'Pengandaran',
         onTap: () {
-          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+          Get.toNamed(Routes.detailBarang, arguments: {
             'image': 'assets/images/product5.png',
             'name': 'Air Mineral',
             'poin': 10,
@@ -90,7 +90,7 @@ class AllExchangePoinController extends GetxController {
         poin: 150,
         lokasi: 'Ancol',
         onTap: () {
-          Get.toNamed(Routes.DETAIL_BARANG, arguments: {
+          Get.toNamed(Routes.detailBarang, arguments: {
             'image': 'assets/images/product6.png',
             'name': 'Ancol Key Chain',
             'poin': 150,
@@ -114,16 +114,6 @@ class AllExchangePoinController extends GetxController {
             item.lokasi.toLowerCase().contains(lowerQuery)),
       );
     }
-  }
-
-  @override
-  void onReady() {
-    super.onReady();
-  }
-
-  @override
-  void onClose() {
-    super.onClose();
   }
 
   void increment() => count.value++;

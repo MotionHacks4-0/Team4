@@ -1,8 +1,6 @@
-import 'package:eco_trip/app/utils/app_style.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:hive/hive.dart';
-
 import '../routes/app_pages.dart';
 
 class SplashScreen extends StatelessWidget {
@@ -13,10 +11,10 @@ class SplashScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     Future.delayed(const Duration(seconds: 3), () {
       if (hasSeenOnboarding) {
-        Get.offAllNamed(Routes.LOGIN);
+        Get.offAllNamed(Routes.login);
       } else {
         Hive.box('onboarding').put('seen', true);
-        Get.offAllNamed(Routes.ONBOARDING);
+        Get.offAllNamed(Routes.onboarding);
       }
     });
 

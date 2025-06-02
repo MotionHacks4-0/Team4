@@ -3,10 +3,10 @@ import 'package:get/get.dart';
 
 class WisataMitraList extends StatelessWidget {
   const WisataMitraList({
-    Key? key,
+    super.key,
     required this.image,
     required this.press,
-  }) : super(key: key);
+  });
   final String image;
   final VoidCallback press;
 

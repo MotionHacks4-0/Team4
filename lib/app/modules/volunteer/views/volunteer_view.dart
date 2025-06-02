@@ -1,10 +1,7 @@
 import 'package:eco_trip/app/widgets/custom_search_bar.dart';
 import 'package:eco_trip/app/widgets/custom_volunteer_tiles.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
-import 'package:hive/hive.dart';
-
 import '../controllers/volunteer_controller.dart';
 
 class VolunteerView extends GetView<VolunteerController> {

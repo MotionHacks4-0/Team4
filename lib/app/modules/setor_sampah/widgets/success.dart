@@ -35,7 +35,7 @@ class Success {
               const SizedBox(height: 20),
               ElevatedButton(
                 onPressed: () {
-                  Get.offAllNamed(Routes.BOTTOMNAVIGATION);
+                  Get.offAllNamed(Routes.bottomNavigation);
                   controller.update();
                 },
                 style: ElevatedButton.styleFrom(

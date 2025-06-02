@@ -1,4 +1,3 @@
-import 'package:eco_trip/app/modules/login/controllers/login_controller.dart';
 import 'package:eco_trip/app/routes/app_pages.dart';
 import 'package:eco_trip/app/utils/app_style.dart';
 import 'package:eco_trip/app/widgets/custom_button.dart';
@@ -10,7 +9,7 @@ import 'package:get/get.dart';
 import '../controllers/register_controller.dart';
 
 class RegisterView extends GetView<RegisterController> {
-  RegisterView({super.key});
+  const RegisterView({super.key});
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -95,7 +94,7 @@ class RegisterView extends GetView<RegisterController> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          Get.offNamed(Routes.LOGIN);
+                          Get.offNamed(Routes.login);
                         },
                         child: Text(
                           "Masuk",

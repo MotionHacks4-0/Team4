@@ -21,7 +21,6 @@ class OnboardingView extends GetView<OnboardingController> {
             controller: controller.indicator,
             onPageChanged: (value) {
               controller.page.value = value;
-              print(controller.page.value);
             },
             children: [
               //start page
@@ -99,12 +98,12 @@ class OnboardingView extends GetView<OnboardingController> {
                       )
                     : GestureDetector(
                         onTap: () {
-                          Get.offAllNamed(Routes.LOGIN);
+                          Get.offAllNamed(Routes.login);
                         },
                         child: CustomButton(
                           text: "Mulai",
                           onPress: () {
-                            Get.offAllNamed(Routes.LOGIN);
+                            Get.offAllNamed(Routes.login);
                           },
                           textStyle: Style.headLineStyle6,
                           col: Style.primaryColor,

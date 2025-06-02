@@ -29,7 +29,7 @@ class InformationView extends GetView<InformationController> {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             SizedBox(height: 27),
-            Container(
+            SizedBox(
               width: 350,
               height: 217,
               child: Stack(
@@ -62,7 +62,7 @@ class InformationView extends GetView<InformationController> {
               ),
             ),
             SizedBox(height: 20),
-            Container(
+            SizedBox(
               width: 350,
               height: 217,
               child: Stack(
@@ -94,7 +94,7 @@ class InformationView extends GetView<InformationController> {
               ),
             ),
             SizedBox(height: 20),
-            Container(
+            SizedBox(
               width: 350,
               height: 217,
               child: Stack(

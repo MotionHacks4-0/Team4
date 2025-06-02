@@ -1,5 +1,4 @@
 import 'package:eco_trip/app/modules/edit_profile_field/views/edit_profile_field_view.dart';
-import 'package:eco_trip/app/routes/app_pages.dart';
 import 'package:eco_trip/app/utils/app_style.dart';
 import 'package:eco_trip/app/widgets/custom_button.dart';
 import 'package:eco_trip/app/widgets/profile_info_tile.dart';
@@ -11,6 +10,8 @@ import '../controllers/profile_controller.dart';
 class ProfileView extends StatelessWidget {
   final controller = Get.put(ProfileController());
   final profile = Get.find<ProfileController>();
+
+  ProfileView({super.key});
 
   @override
   Widget build(BuildContext context) {

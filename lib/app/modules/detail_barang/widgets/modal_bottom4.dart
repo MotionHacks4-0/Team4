@@ -36,7 +36,7 @@ class ModalBottom4 extends StatelessWidget {
           SizedBox(height: 20),
           GestureDetector(
             onTap: () {
-              Get.offAllNamed(Routes.BOTTOMNAVIGATION);
+              Get.offAllNamed(Routes.bottomNavigation);
             },
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 45, vertical: 7),

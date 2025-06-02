@@ -1,13 +1,12 @@
 import 'package:eco_trip/app/models/volunteer_model.dart';
 import 'package:eco_trip/app/utils/app_style.dart';
 import 'package:flutter/material.dart';
-
 import 'package:get/get.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-import '../controllers/volunteer_detail_controller.dart';
-
 class VolunteerDetailView extends StatelessWidget {
+  const VolunteerDetailView({super.key});
+
   @override
   Widget build(BuildContext context) {
     final VolunteerModel volunteer = Get.arguments as VolunteerModel;

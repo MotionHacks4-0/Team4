@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 
 class TukarPoinController extends GetxController {
-  //TODO: Implement TukarPoinController
-
   final count = 0.obs;
   @override
   void onInit() {

@@ -13,7 +13,7 @@ class DetailBarangView extends GetView<DetailBarangController> {
   final int poin;
   final String location;
 
-  DetailBarangView(this.image, this.name, this.poin, this.location,
+  const DetailBarangView(this.image, this.name, this.poin, this.location,
       {super.key});
   @override
   Widget build(BuildContext context) {
@@ -54,7 +54,7 @@ class DetailBarangView extends GetView<DetailBarangController> {
                   Align(
                     alignment: Alignment.centerLeft,
                     child: Text(
-                      '${poin} poin',
+                      '$poin poin',
                       style: Style.headLineStyle19,
                     ),
                   ),

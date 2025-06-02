@@ -4,41 +4,39 @@ part of 'app_pages.dart';
 abstract class Routes {
   Routes._();
   static const splash = _Paths.splash;
-  static const HOME = _Paths.HOME;
-  static const ONBOARDING = _Paths.ONBOARDING;
-  static const BOTTOMNAVIGATION = _Paths.BOTTOMNAVIGATION;
-  static const INPUTGRAM = _Paths.INPUTGRAM;
-  static const VOLUNTEER = _Paths.VOLUNTEER;
-  static const LOGIN = _Paths.LOGIN;
-  static const REGISTER = _Paths.REGISTER;
-  static const DETAIL_WISATA_DART = _Paths.DETAIL_WISATA_DART;
-  static const ALL_EXCHANGE_POIN = _Paths.ALL_EXCHANGE_POIN;
-  static const DETAIL_BARANG = _Paths.DETAIL_BARANG;
-  static const SETOR_SAMPAH = _Paths.SETOR_SAMPAH;
-  static const TUKAR_POIN = _Paths.TUKAR_POIN;
-  static const INFORMATION = _Paths.INFORMATION;
-  static const PROFILE = _Paths.PROFILE;
-
-  static const VOLUNTEER_DETAIL = _Paths.VOLUNTEER_DETAIL;
+  static const home = _Paths.home;
+  static const onboarding = _Paths.onboarding;
+  static const bottomNavigation = _Paths.bottomNavigation;
+  static const inputGram = _Paths.inputGram;
+  static const volunteer = _Paths.volunteer;
+  static const login = _Paths.login;
+  static const register = _Paths.register;
+  static const detailWisata = _Paths.detailWisata;
+  static const allExchangePoin = _Paths.allExchangePoin;
+  static const detailBarang = _Paths.detailBarang;
+  static const setorSampah = _Paths.setorSampah;
+  static const tukarPoin = _Paths.tukarPoin;
+  static const information = _Paths.information;
+  static const profile = _Paths.profile;
+  static const volunteerDetail = _Paths.volunteerDetail;
 }
 
 abstract class _Paths {
   _Paths._();
   static const splash = '/splash';
-  static const HOME = '/home';
-  static const ONBOARDING = '/onboarding';
-  static const BOTTOMNAVIGATION = '/bottomnavigation';
-  static const INPUTGRAM = '/inputgram';
-  static const VOLUNTEER = '/volunteer';
-  static const LOGIN = '/login';
-  static const REGISTER = '/register';
-  static const DETAIL_WISATA_DART = '/detail-wisata-dart';
-  static const ALL_EXCHANGE_POIN = '/all-exchange-poin';
-  static const DETAIL_BARANG = '/detail-barang';
-  static const SETOR_SAMPAH = '/setor-sampah';
-  static const TUKAR_POIN = '/tukar-poin';
-  static const INFORMATION = '/information';
-  static const PROFILE = '/profile';
-
-  static const VOLUNTEER_DETAIL = '/volunteer-detail';
+  static const home = '/home';
+  static const onboarding = '/onboarding';
+  static const bottomNavigation = '/bottomnavigation';
+  static const inputGram = '/inputgram';
+  static const volunteer = '/volunteer';
+  static const login = '/login';
+  static const register = '/register';
+  static const detailWisata = '/detail-wisata-dart';
+  static const allExchangePoin = '/all-exchange-poin';
+  static const detailBarang = '/detail-barang';
+  static const setorSampah = '/setor-sampah';
+  static const tukarPoin = '/tukar-poin';
+  static const information = '/information';
+  static const profile = '/profile';
+  static const volunteerDetail = '/volunteer-detail';
 }

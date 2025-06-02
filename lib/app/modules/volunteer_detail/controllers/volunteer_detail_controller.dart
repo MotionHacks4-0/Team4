@@ -1,8 +1,6 @@
 import 'package:get/get.dart';
 
 class VolunteerDetailController extends GetxController {
-  //TODO: Implement VolunteerDetailController
-
   final count = 0.obs;
   @override
   void onInit() {

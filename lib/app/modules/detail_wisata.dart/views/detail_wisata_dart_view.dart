@@ -26,7 +26,7 @@ class DetailWisataDartView extends GetView {
                         height: 300,
                         width: double.infinity,
                         child: Image.asset(
-                          data.image ?? 'assets/images/default_pariwisata.png',
+                          data.image,
                           fit: BoxFit.cover,
                         ),
                       ),

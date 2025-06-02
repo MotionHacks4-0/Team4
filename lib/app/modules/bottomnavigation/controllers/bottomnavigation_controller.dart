@@ -4,7 +4,7 @@ import 'package:eco_trip/app/modules/volunteer/views/volunteer_view.dart';
 import 'package:get/get.dart';
 
 class BottomnavigationController extends GetxController {
-  RxInt CurrentIndex = 0.obs;
+  RxInt currentIndex = 0.obs;
 
   final screens = [
     HomeView(),
@@ -12,9 +12,8 @@ class BottomnavigationController extends GetxController {
     ProfileView(),
   ];
 
-  SetIndex(index) {
-    print(index);
-    CurrentIndex.value = index;
+  setIndex(index) {
+    currentIndex.value = index;
     update();
   }
 }

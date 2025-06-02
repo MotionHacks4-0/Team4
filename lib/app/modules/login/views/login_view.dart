@@ -100,7 +100,7 @@ class LoginView extends GetView<LoginController> {
                 ),
                 GestureDetector(
                   onTap: () {
-                    Get.offNamed(Routes.REGISTER);
+                    Get.offNamed(Routes.register);
                   },
                   child: Text(
                     "Daftar",

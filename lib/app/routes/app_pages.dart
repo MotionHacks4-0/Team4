@@ -30,65 +30,63 @@ import '../modules/tukar_poin/bindings/tukar_poin_binding.dart';
 import '../modules/tukar_poin/views/tukar_poin_view.dart';
 import '../modules/volunteer/bindings/volunteer_binding.dart';
 import '../modules/volunteer/views/volunteer_view.dart';
-import '../widgets/splash.dart';
-
 part 'app_routes.dart';
 
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.LOGIN;
+  static const initial = Routes.login;
 
   static final routes = [
     GetPage(
-      name: _Paths.HOME,
+      name: _Paths.home,
       page: () => HomeView(),
       binding: HomeBinding(),
     ),
     GetPage(
-      name: _Paths.ONBOARDING,
+      name: _Paths.onboarding,
       page: () => const OnboardingView(),
       binding: OnboardingBinding(),
     ),
     GetPage(
-      name: _Paths.BOTTOMNAVIGATION,
+      name: _Paths.bottomNavigation,
       page: () => const BottomnavigationView(),
       binding: BottomnavigationBinding(),
     ),
     GetPage(
-      name: _Paths.INPUTGRAM,
+      name: _Paths.inputGram,
       page: () => const InputgramView(),
       binding: InputgramBinding(),
     ),
     GetPage(
-      name: _Paths.VOLUNTEER,
+      name: _Paths.volunteer,
       page: () => const VolunteerView(),
       binding: VolunteerBinding(),
     ),
     GetPage(
-      name: _Paths.LOGIN,
+      name: _Paths.login,
       page: () => const LoginView(),
       binding: LoginBinding(),
     ),
     GetPage(
-      name: _Paths.REGISTER,
+      name: _Paths.register,
       page: () => RegisterView(),
       binding: RegisterBinding(),
     ),
     GetPage(
-      name: _Paths.DETAIL_WISATA_DART,
+      name: _Paths.detailWisata,
       page: () => DetailWisataDartView(
         pariwisata: null,
       ),
       binding: DetailWisataDartBinding(),
     ),
     GetPage(
-      name: _Paths.ALL_EXCHANGE_POIN,
+      name: _Paths.allExchangePoin,
       page: () => const AllExchangePoinView(),
       binding: AllExchangePoinBinding(),
     ),
     GetPage(
-      name: _Paths.DETAIL_BARANG,
+      name: _Paths.detailBarang,
       page: () {
         final args = Get.arguments as Map<String, dynamic>;
         return DetailBarangView(
@@ -101,27 +99,27 @@ class AppPages {
       binding: DetailBarangBinding(),
     ),
     GetPage(
-      name: _Paths.SETOR_SAMPAH,
+      name: _Paths.setorSampah,
       page: () => const SetorSampahView(),
       binding: SetorSampahBinding(),
     ),
     GetPage(
-      name: _Paths.TUKAR_POIN,
+      name: _Paths.tukarPoin,
       page: () => const TukarPoinView(),
       binding: TukarPoinBinding(),
     ),
     GetPage(
-      name: _Paths.INFORMATION,
+      name: _Paths.information,
       page: () => const InformationView(),
       binding: InformationBinding(),
     ),
     GetPage(
-      name: _Paths.PROFILE,
+      name: _Paths.profile,
       page: () => ProfileView(),
       binding: ProfileBinding(),
     ),
     GetPage(
-      name: _Paths.VOLUNTEER_DETAIL,
+      name: _Paths.volunteerDetail,
       page: () => VolunteerDetailView(),
       binding: VolunteerDetailBinding(),
     ),

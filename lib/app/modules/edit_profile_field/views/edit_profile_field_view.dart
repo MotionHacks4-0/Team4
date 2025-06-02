@@ -10,7 +10,7 @@ class EditProfileFieldView extends StatelessWidget {
   final RxString field;
   final void Function(String) onSave;
 
-  EditProfileFieldView({
+  EditProfileFieldView({super.key, 
     required this.title,
     required this.label,
     required this.field,
@@ -38,7 +38,7 @@ class EditProfileFieldView extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Gunakan informasi ${label} yang sesuai',
+              'Gunakan informasi $label yang sesuai',
               style: Style.headLineStyle7,
             ),
             SizedBox(height: 5),

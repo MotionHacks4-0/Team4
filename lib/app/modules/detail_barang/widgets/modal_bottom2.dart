@@ -65,10 +65,9 @@ class ModalBottom2 extends StatelessWidget {
                   Navigator.pop(context); // tutup ModalBottom2
                   Navigator.pop(context); // tutup ModalBottom1
                   Future.delayed(Duration.zero, () {
-                    onTap:
                     () {
                       Get.toNamed(
-                        Routes.DETAIL_BARANG,
+                        Routes.detailBarang,
                       );
                     };
                   });
@@ -114,7 +113,7 @@ class ModalBottom2 extends StatelessWidget {
                         builder: (BuildContext context) {
                           Future.delayed(const Duration(milliseconds: 1500),
                               () {
-                            Get.offAllNamed(Routes.BOTTOMNAVIGATION);
+                            Get.offAllNamed(Routes.bottomNavigation);
                           });
 
                           return const ModalBotttom3();
@@ -142,7 +141,7 @@ class ModalBottom2 extends StatelessWidget {
                       },
                     );
                   }
-                  ;
+                  
                 },
                 child: Container(
                   padding:

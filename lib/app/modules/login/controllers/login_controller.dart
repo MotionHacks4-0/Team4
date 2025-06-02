@@ -1,11 +1,8 @@
-import 'package:eco_trip/app/modules/profile/controllers/profile_controller.dart';
 import 'package:eco_trip/app/routes/app_pages.dart';
 import 'package:eco_trip/app/services/auth_service.dart';
 import 'package:get/get.dart';
 
 class LoginController extends GetxController {
-  //TODO: Implement LoginController
-
   final AuthService _authService = AuthService();
   var rememberMe = false.obs;
   var obscurePassword = true.obs;
@@ -24,7 +21,7 @@ class LoginController extends GetxController {
     try {
       final user = await _authService.login(email.value, password.value);
       if (user != null) {
-        Get.offNamed(Routes.BOTTOMNAVIGATION);
+        Get.offNamed(Routes.bottomNavigation);
       }
     } catch (e) {
       Get.snackbar('Login Failed', e.toString());
@@ -35,7 +32,7 @@ class LoginController extends GetxController {
     try {
       final user = await _authService.loginWithGoogle();
       if (user != null) {
-        Get.offNamed(Routes.BOTTOMNAVIGATION);
+        Get.offNamed(Routes.bottomNavigation);
       } else {
         Get.snackbar('Login Canceled', 'User canceled the Google sign-in.');
       }
